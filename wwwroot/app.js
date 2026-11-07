@@ -1,0 +1,111 @@
+function make(tag, value, className) {
+  const element = document.createElement(tag);
+  if (className) element.className = className;
+  element.textContent = value;
+  return element;
+}
+
+function picture(work) {
+  const image = document.createElement("img");
+  image.src = work.src;
+  image.alt = work.alt;
+  return image;
+}
+
+function showArticle(container, item) {
+  container.replaceChildren(
+    make("h3", item.title),
+    make("p", item.body, "body")
+  );
+}
+
+document.querySelector("[data-class]").textContent = newspaper.className;
+document.querySelector("#letter-content").append(
+  ...newspaper.letter.map(line => make("p", line))
+);
+
+const page = document.querySelector("#book-page");
+const previous = document.querySelector("#book-prev");
+const next = document.querySelector("#book-next");
+const count = document.querySelector("#book-count");
+let pageIndex = 0;
+
+function showPage() {
+  const item = newspaper.literature[pageIndex];
+  showArticle(page, item);
+  page.prepend(make("p", item.kind, "label"));
+  count.textContent = (pageIndex + 1) + " / " + newspaper.literature.length;
+  previous.disabled = pageIndex === 0;
+  next.disabled = pageIndex === newspaper.literature.length - 1;
+}
+
+previous.addEventListener("click", () => {
+  pageIndex -= 1;
+  showPage();
+  if (previous.disabled) next.focus();
+});
+next.addEventListener("click", () => {
+  pageIndex += 1;
+  showPage();
+  if (next.disabled) previous.focus();
+});
+showPage();
+
+const dialog = document.querySelector("#viewer");
+function openViewer(title, ...content) {
+  document.querySelector("#dialog-title").textContent = title;
+  document.querySelector("#dialog-content").replaceChildren(...content);
+  dialog.showModal();
+}
+
+const gallery = document.querySelector("#gallery");
+for (const work of newspaper.art) {
+  const button = make("button", "", "art-card");
+  button.type = "button";
+  button.setAttribute("aria-haspopup", "dialog");
+  const thumbnail = picture(work);
+  thumbnail.alt = "";
+  thumbnail.loading = "lazy";
+  button.append(thumbnail, make("strong", work.title));
+  button.addEventListener("click", () => openViewer(work.title, picture(work)));
+  gallery.append(button);
+}
+
+const memories = document.querySelector("#memories");
+for (const memory of newspaper.memories) {
+  const article = make("article", "", "memory");
+  showArticle(article, memory);
+  memories.append(article);
+}
+document.querySelector("#wishes").append(
+  ...newspaper.wishes.map(wish => make("li", wish))
+);
+
+const flowers = document.querySelector("#flowers");
+const flowerStory = document.querySelector("#flower-story");
+const flowerButtons = newspaper.goodDeeds.map(deed => {
+  const button = make("button", "", "flower");
+  button.type = "button";
+  button.setAttribute("aria-controls", "flower-story");
+  const icon = make("span", deed.icon);
+  icon.setAttribute("aria-hidden", "true");
+  button.append(icon, deed.title);
+  button.addEventListener("click", () => showFlower(button, deed));
+  return button;
+});
+
+function showFlower(selected, deed) {
+  for (const button of flowerButtons) {
+    button.setAttribute("aria-pressed", String(button === selected));
+  }
+  showArticle(flowerStory, deed);
+}
+flowers.append(...flowerButtons);
+showFlower(flowerButtons[0], newspaper.goodDeeds[0]);
+
+const card = document.querySelector("#open-card");
+card.setAttribute("aria-haspopup", "dialog");
+card.addEventListener("click", () => {
+  openViewer(newspaper.card.title, picture(newspaper.card), make("p", newspaper.card.body, "body"));
+});
+

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8e9">
+  <title>Khu vườn tri ân · Báo tường 20/11</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#noi-dung">Đến nội dung</a>
+  <header class="masthead" id="dau-trang">
+    <div class="wrap top">
+      <a class="brand" href="#dau-trang"><span aria-hidden="true">✿</span> Báo tường Chi Lăng</a>
+      <span class="edition">SỐ ĐẶC BIỆT <b>20/11</b></span>
+    </div>
+  </header>
+  <main id="noi-dung">
+    <section class="hero wrap" aria-labelledby="ten-bao">
+      <div class="cover-copy">
+        <p class="label event">CHÀO MỪNG NGÀY NHÀ GIÁO VIỆT NAM 20/11</p>
+        <h1 id="ten-bao">Khu vườn<br><em>tri ân</em><span aria-hidden="true"> ✦</span></h1>
+        <p class="deck">Ngàn lời yêu thương</p>
+        <p class="intro">Mỗi bài thơ, bức tranh và việc làm tốt là một bông hoa nhỏ chúng em gửi tặng thầy cô.</p>
+        <a class="button primary" href="#loi-ngo">Mở trang báo <span aria-hidden="true">↓</span></a>
+        <p class="classline"><span data-class>Lớp …</span> <span aria-hidden="true">·</span> Trường Tiểu học Chi Lăng <span aria-hidden="true">·</span> 2026–2027</p>
+      </div>
+      <div class="cover-art">
+        <img src="assets/khu-vuon.svg" alt="Ngôi trường màu vàng, cuốn sách mở và những bông hoa trong khu vườn">
+        <span class="petal petal-one" aria-hidden="true">✿</span><span class="petal petal-two" aria-hidden="true">✦</span>
+        <span class="art-tag">Vườn hoa của lớp mình ♡</span>
+      </div>
+    </section>
+    <nav class="toc" aria-label="Mục lục báo tường">
+      <div class="wrap toc-links">
+        <a href="#loi-ngo">Lời ngỏ</a><a href="#van-hoc">Văn học</a><a href="#net-ve">Nét vẽ</a>
+        <a href="#ky-niem">Kỷ niệm</a><a href="#loi-chuc">Lời chúc</a><a href="#viec-tot">Việc tốt</a><a href="#sang-tao">Sáng tạo</a>
+      </div>
+    </nav>
+    <div class="wrap sample"><strong>Bản mẫu để lớp biên tập.</strong> Bài viết và tranh trên trang là ví dụ minh họa.</div>
+    <section class="section wrap letter-section" id="loi-ngo" aria-labelledby="title-letter">
+      <div class="section-title"><p class="label">02 / BỨC THƯ ĐẦU TRANG</p><h2 id="title-letter">Lời ngỏ yêu thương</h2><p>Một phong thư nhỏ dành riêng cho thầy cô.</p></div>
+      <details class="letter">
+        <summary><span aria-hidden="true">♡</span> Mở thư gửi thầy cô</summary>
+        <div class="letter-body" id="letter-content"></div>
+      </details>
+    </section>
+    <section class="band lilac" id="van-hoc" aria-labelledby="title-books">
+      <div class="section wrap">
+        <div class="section-title"><p class="label">03 / TỪ TRANG VỞ NHỎ</p><h2 id="title-books">Trang văn học tuổi thơ</h2><p>Lật từng trang để đọc những vần thơ và câu chuyện nhỏ.</p></div>
+        <div class="book">
+          <article id="book-page" aria-live="polite"></article>
+          <div class="book-controls"><button class="button" id="book-prev" type="button">← Trang trước</button><span id="book-count"></span><button class="button" id="book-next" type="button">Trang sau →</button></div>
+        </div>
+      </div>
+    </section>
+    <section class="section wrap" id="net-ve" aria-labelledby="title-gallery">
+      <div class="section-title"><p class="label">04 / HỘP MÀU CỦA EM</p><h2 id="title-gallery">Nét vẽ tri ân</h2><p>Chọn một bức tranh để xem gần hơn.</p></div>
+      <div class="grid gallery" id="gallery"></div>
+    </section>
+    <section class="band peach" id="ky-niem" aria-labelledby="title-memories">
+      <div class="section wrap">
+        <div class="section-title"><p class="label">05 / SỔ LƯU BÚT</p><h2 id="title-memories">Kỷ niệm dưới mái trường</h2><p>Gấp góc trang để nhớ mãi những ngày này.</p></div>
+        <div class="grid memories" id="memories"></div>
+      </div>
+    </section>
+    <section class="section wrap" id="loi-chuc" aria-labelledby="title-wishes">
+      <div class="section-title"><p class="label">06 / GIẤY NHẮN NHIỀU MÀU</p><h2 id="title-wishes">Lời hay ý đẹp</h2><p>Những lời chúc nhỏ xíu, vừa vặn trong túi áo thầy cô.</p></div>
+      <ul class="notes" id="wishes"></ul>
+    </section>
+    <section class="band mint" id="viec-tot" aria-labelledby="title-garden">
+      <div class="section wrap">
+        <div class="section-title"><p class="label">07 / MỖI NGÀY MỘT ĐIỀU TỬ TẾ</p><h2 id="title-garden">Bông hoa việc tốt dâng thầy cô</h2><p>Chạm vào từng bông hoa để đọc câu chuyện của hoa.</p></div>
+        <div class="flowers" id="flowers"></div>
+        <article id="flower-story" class="flower-story" aria-live="polite"></article>
+      </div>
+    </section>
+    <section class="section wrap creative" id="sang-tao" aria-labelledby="title-create">
+      <div class="section-title"><p class="label">08 / BÀN THỦ CÔNG</p><h2 id="title-create">Góc sáng tạo của em</h2><p>Một chiếc thiệp bé xinh, mở ra là cả một lời cảm ơn.</p></div>
+      <button class="postcard" type="button" id="open-card"><span aria-hidden="true">✉</span><strong>Gửi thầy cô</strong><small>Mở thiệp 20/11 →</small></button>
+    </section>
+  </main>
+  <footer><div class="wrap footer"><div><strong>✿ Khu vườn tri ân</strong><p>Trường Tiểu học Chi Lăng · Năm học 2026–2027</p></div><a href="#dau-trang">Về trang bìa ↑</a></div></footer>
+  <dialog id="viewer" aria-labelledby="dialog-title">
+    <form method="dialog"><button class="button close" value="close" aria-label="Đóng" autofocus>×</button></form>
+    <h2 id="dialog-title"></h2><div id="dialog-content"></div>
+  </dialog>
+</body>
+</html>
