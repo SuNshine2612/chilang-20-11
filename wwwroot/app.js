@@ -30,10 +30,17 @@ const next = document.querySelector("#book-next");
 const count = document.querySelector("#book-count");
 let pageIndex = 0;
 
-function showPage() {
+function showPage(direction) {
   const item = newspaper.literature[pageIndex];
   showArticle(page, item);
   page.prepend(make("p", item.kind, "label"));
+  if (direction) {
+    const edge = make("span", "", "page-turn");
+    edge.dataset.direction = direction;
+    edge.setAttribute("aria-hidden", "true");
+    edge.addEventListener("animationend", () => edge.remove(), { once: true });
+    page.append(edge);
+  }
   count.textContent = (pageIndex + 1) + " / " + newspaper.literature.length;
   previous.disabled = pageIndex === 0;
   next.disabled = pageIndex === newspaper.literature.length - 1;
@@ -41,12 +48,12 @@ function showPage() {
 
 previous.addEventListener("click", () => {
   pageIndex -= 1;
-  showPage();
+  showPage("previous");
   if (previous.disabled) next.focus();
 });
 next.addEventListener("click", () => {
   pageIndex += 1;
-  showPage();
+  showPage("next");
   if (next.disabled) previous.focus();
 });
 showPage();
@@ -87,8 +94,13 @@ const flowerButtons = newspaper.goodDeeds.map(deed => {
   const button = make("button", "", "flower");
   button.type = "button";
   button.setAttribute("aria-controls", "flower-story");
-  const icon = make("span", deed.icon);
+  const icon = make("span", "", "flower-icon");
   icon.setAttribute("aria-hidden", "true");
+  for (let index = 0; index < 5; index += 1) {
+    const petal = make("span", "", "flower-petal");
+    petal.style.setProperty("--angle", (index * 72) + "deg");
+    icon.append(petal);
+  }
   button.append(icon, deed.title);
   button.addEventListener("click", () => showFlower(button, deed));
   return button;
@@ -106,7 +118,9 @@ showFlower(flowerButtons[0], newspaper.goodDeeds[0]);
 const card = document.querySelector("#open-card");
 card.setAttribute("aria-haspopup", "dialog");
 card.addEventListener("click", () => {
-  openViewer(newspaper.card.title, picture(newspaper.card), make("p", newspaper.card.body, "body"));
+  const envelope = card.querySelector(".envelope").cloneNode(true);
+  envelope.classList.add("card-envelope");
+  openViewer(newspaper.card.title, envelope, picture(newspaper.card), make("p", newspaper.card.body, "body"));
 });
 
 
@@ -123,5 +137,8 @@ const sectionObserver = new IntersectionObserver(entries => {
     entry.target.classList.add("in-view");
     sectionObserver.unobserve(entry.target);
   }
-}, { threshold: 0.3 });
-document.querySelectorAll(".section-title").forEach(title => sectionObserver.observe(title));
+}, { threshold: 0, rootMargin: "0px 0px -24px 0px" });
+const scrollIllustrations = document.querySelectorAll(
+  ".section-title, .letter, .book, .art-card, .memory, .notes li, .flower, .flower-story, .postcard"
+);
+scrollIllustrations.forEach(element => sectionObserver.observe(element));
