@@ -593,6 +593,28 @@ footer {
   background-size: auto 100%;
   background-color: #f5f0e4;
 }
+.music-toggle {
+  position: fixed;
+  z-index: 4;
+  right: max(.9rem, env(safe-area-inset-right));
+  bottom: max(4.8rem, calc(env(safe-area-inset-bottom) + 4.8rem));
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  min-height: 3rem;
+  padding: .45rem .8rem;
+  border: 2px solid #b94e7b;
+  border-radius: 2rem;
+  background: #fff0c9;
+  color: #573567;
+  box-shadow: 0 4px 12px #33234d2b;
+  font: inherit;
+  font-weight: 750;
+}
+.music-note { color: #aa376d; font-size: 1.5rem; line-height: 1; }
+.music-toggle[aria-pressed="true"] .music-note { animation: music-bounce .55s ease-in-out infinite alternate; }
+@keyframes music-bounce { to { transform: rotate(12deg) scale(1.18); } }
+@media (prefers-reduced-motion: reduce) { .music-note { animation: none !important; } }
 @media (max-width: 600px) {
   .masthead .schoolyard { height: 10rem; }
 }

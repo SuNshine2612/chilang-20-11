@@ -103,6 +103,11 @@
       <path d="m15 20 5-5 5 5m-5-5v10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </a>
+  <audio id="background-music" src="bui-phan.mp3" loop preload="none"></audio>
+  <button class="music-toggle" type="button" aria-label="Phát nhạc nền" aria-pressed="false" title="Phát nhạc nền">
+    <span class="music-note" aria-hidden="true">♫</span>
+    <span class="music-label">Bật nhạc</span>
+  </button>
   <dialog id="viewer" aria-labelledby="dialog-title">
     <form method="dialog"><button class="button close" value="close" aria-label="Đóng" autofocus>×</button></form>
     <h2 id="dialog-title"></h2><div id="dialog-content"></div>

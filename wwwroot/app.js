@@ -125,6 +125,28 @@ card.addEventListener("click", () => {
 
 
 const backTop = document.querySelector(".back-top");
+const music = document.querySelector("#background-music");
+const musicToggle = document.querySelector(".music-toggle");
+musicToggle.addEventListener("click", async () => {
+  if (music.paused) {
+    try {
+      await music.play();
+      musicToggle.setAttribute("aria-pressed", "true");
+      musicToggle.setAttribute("aria-label", "Tắt nhạc nền");
+      musicToggle.title = "Tắt nhạc nền";
+      musicToggle.querySelector(".music-label").textContent = "Đang phát";
+    } catch {
+      musicToggle.setAttribute("aria-label", "Không phát được nhạc nền");
+      musicToggle.title = "Không phát được nhạc nền";
+    }
+  } else {
+    music.pause();
+    musicToggle.setAttribute("aria-pressed", "false");
+    musicToggle.setAttribute("aria-label", "Phát nhạc nền");
+    musicToggle.title = "Phát nhạc nền";
+    musicToggle.querySelector(".music-label").textContent = "Bật nhạc";
+  }
+});
 function updateBackTop() {
   backTop.hidden = window.scrollY < 400;
 }
