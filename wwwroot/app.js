@@ -142,3 +142,23 @@ const scrollIllustrations = document.querySelectorAll(
   ".section-title, .letter, .book, .art-card, .memory, .notes li, .flower, .flower-story, .postcard"
 );
 scrollIllustrations.forEach(element => sectionObserver.observe(element));
+
+const toc = document.querySelector(".toc");
+new ResizeObserver(() => {
+  document.documentElement.style.setProperty("--toc-height", toc.offsetHeight + "px");
+}).observe(toc);
+
+toc.addEventListener("click", event => {
+  const link = event.target.closest("a[href^='#']");
+  if (!link || event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+
+  const section = document.getElementById(link.hash.slice(1));
+  if (!section) return;
+
+  for (const element of scrollIllustrations) {
+    if (!section.contains(element)) continue;
+    element.classList.remove("in-view");
+    sectionObserver.unobserve(element);
+    sectionObserver.observe(element);
+  }
+});

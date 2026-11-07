@@ -1,5 +1,5 @@
 const newspaper = {
-  className: "Lớp …",
+  className: "Lớp 1/7",
   letter: [
     "Kính gửi thầy cô,",
     "Tờ báo này giống như một luống đất nhỏ. Chúng em gieo vào đó những vần thơ, những bức tranh và cả những chuyện bé xíu mà chúng em vẫn nhớ. Nhờ thầy cô kiên nhẫn chỉ bảo, mỗi ngày chúng em lại làm được thêm một điều mới.",
