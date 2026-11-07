@@ -109,3 +109,19 @@ card.addEventListener("click", () => {
   openViewer(newspaper.card.title, picture(newspaper.card), make("p", newspaper.card.body, "body"));
 });
 
+
+const backTop = document.querySelector(".back-top");
+function updateBackTop() {
+  backTop.hidden = window.scrollY < 400;
+}
+window.addEventListener("scroll", updateBackTop, { passive: true });
+updateBackTop();
+
+const sectionObserver = new IntersectionObserver(entries => {
+  for (const entry of entries) {
+    if (!entry.isIntersecting) continue;
+    entry.target.classList.add("in-view");
+    sectionObserver.unobserve(entry.target);
+  }
+}, { threshold: 0.3 });
+document.querySelectorAll(".section-title").forEach(title => sectionObserver.observe(title));
