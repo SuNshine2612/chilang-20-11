@@ -379,3 +379,220 @@ main section[id] { scroll-margin-top: calc(var(--toc-height, 4rem) + .75rem); }
   }
   .toc-icon { width: 1.35rem; height: 1.35rem; }
 }
+
+/* Cut-paper backgrounds leave the reading surface unobstructed. */
+#loi-ngo, #net-ve, #loi-chuc, #sang-tao {
+  position: relative;
+  isolation: isolate;
+}
+#loi-ngo::before, #net-ve::before, #loi-chuc::before, #sang-tao::before {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#loi-ngo::before {
+  inset: .5rem 0 0;
+  background-image: url("assets/heart-paper.svg");
+}
+#loi-ngo { padding-bottom: 7rem; }
+#net-ve::before {
+  inset: 0;
+  background-image: url("assets/flower-paper.svg");
+  opacity: .7;
+}
+#net-ve .gallery { padding: .4rem; }
+
+#van-hoc {
+  border-radius: 3% 3% 0 0 / 1.5rem 1.5rem 0 0;
+  border-top: 3px dashed #cdb6e4;
+  border-bottom: 3px dashed #cdb6e4;
+}
+#ky-niem {
+  border-radius: 5rem 1rem 5rem 1rem;
+  margin-inline: clamp(.5rem, 2vw, 2rem);
+}
+#loi-chuc::before {
+  inset: .8rem 0 auto auto;
+  width: clamp(6rem, 20vw, 13rem);
+  height: clamp(6rem, 20vw, 13rem);
+  background-image: url("assets/heart-paper.svg");
+  opacity: .65;
+}
+.notes { gap: 1.5rem; }
+.notes li {
+  position: relative;
+  isolation: isolate;
+  padding: 1.7rem 1.15rem 1.2rem;
+  border-radius: 1rem 1rem 2rem 2rem;
+}
+.notes li::before {
+  position: absolute;
+  content: "";
+  top: -.75rem;
+  left: calc(50% - 1rem);
+  width: 2rem;
+  height: 2rem;
+  background: url("assets/heart-paper.svg") center / contain no-repeat;
+}
+.notes li:nth-child(even) { border-radius: 2rem .8rem 2rem .8rem; }
+.notes li:nth-child(even)::before { background-image: url("assets/flower-paper.svg"); }
+
+#viec-tot {
+  border-radius: 3rem 3rem 0 0;
+  background-image: url("assets/flower-paper.svg"), url("assets/flower-paper.svg");
+  background-size: 6rem, 8rem;
+  background-repeat: no-repeat;
+  background-position: left .5rem bottom .25rem, right .5rem bottom .25rem;
+}
+#sang-tao { padding-top: 8rem; }
+#sang-tao::before {
+  content: "20–11" / "";
+  top: 1.2rem;
+  left: 0;
+  width: 100%;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(4.5rem, 12vw, 9rem);
+  line-height: 1;
+  color: #e5cfe9;
+  letter-spacing: .04em;
+}
+
+@media (max-width: 600px) {
+  #loi-ngo { padding-bottom: 3rem; }
+  #loi-ngo::before {
+    inset: .75rem 0 auto auto;
+    width: 8rem;
+    height: 7rem;
+    opacity: .6;
+  }
+  #net-ve::before { background-position: center top; background-size: 14rem; }
+  #ky-niem { border-radius: 2rem .75rem; }
+  #viec-tot { border-radius: 2rem 2rem 0 0; padding-bottom: 2rem; }
+  #sang-tao { padding-top: 6.5rem; }
+}
+
+.masthead {
+  background: linear-gradient(#eef6ff, #fff8e9);
+  border-bottom: 0;
+}
+.top {
+  position: relative;
+  padding-block: 1.15rem .5rem;
+}
+.schoolyard {
+  height: clamp(5rem, 14vw, 12rem);
+  background: url("assets/san-truong.svg") center bottom / auto 100% repeat-x;
+}
+.brand {
+  padding: .3rem .65rem;
+  border-radius: 1rem;
+  background: #fffdf7d9;
+}
+footer {
+  background: #eaf4dc;
+  color: var(--ink);
+}
+.footer-yard { height: clamp(7rem, 18vw, 14rem); }
+.footer {
+  width: 100%;
+  background: #33234d;
+  color: #fff5e5;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 1.4rem 4.5rem 1.6rem 1.25rem;
+}
+.footer strong {
+  font: 600 clamp(1.3rem, 3vw, 1.75rem) "Playfair Display", Georgia, serif;
+}
+.footer-signature { font-size: .9rem; color: #f1d8ed; }
+
+#sang-tao { padding-bottom: 3rem; }
+.craft-table {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 720px);
+  margin: 1rem auto 0;
+  padding: 3rem clamp(1.2rem, 6vw, 5rem) 1rem;
+  border: 2px solid #e5cc9f;
+  border-radius: 2rem;
+  background: repeating-linear-gradient(0deg, #fff0d4 0 28px, #f7e6c6 28px 29px);
+  box-shadow: 0 8px 0 #e4cfac55;
+}
+.craft-table .postcard {
+  position: relative;
+  max-width: 100%;
+  min-width: min(100%, 18rem);
+  background: #ffe1ec;
+  box-shadow: 0 8px 18px #9d527033;
+}
+.craft-decoration {
+  position: absolute;
+  pointer-events: none;
+  line-height: 1;
+}
+.craft-pencil {
+  left: 4%;
+  bottom: 20%;
+  font-size: 5rem;
+  color: #936628;
+  rotate: -25deg;
+}
+.craft-flower {
+  right: 4%;
+  top: 1rem;
+  font-size: 5rem;
+  color: #bd769b;
+}
+.craft-heart {
+  left: 6%;
+  top: 1rem;
+  font-size: 2.5rem;
+  color: #b75c7f;
+  rotate: -12deg;
+}
+.craft-tape {
+  position: absolute;
+  z-index: 1;
+  width: 5rem;
+  height: 1.5rem;
+  top: -.8rem;
+  left: calc(50% - 2.5rem);
+  background: #c7b1e6bb;
+  rotate: -5deg;
+  border-inline: 3px dotted #fff4e9;
+}
+.craft-caption {
+  position: relative;
+  font-size: .85rem;
+  color: #694a58;
+  font-weight: 650;
+  margin: 1.3rem 0 .2rem;
+}
+@media (max-width: 600px) {
+  .top { flex-wrap: wrap; justify-content: center; gap: .25rem .7rem; }
+  .schoolyard { background-size: auto 100%; height: 6rem; }
+  .footer-yard { height: 8rem; }
+  .footer { align-items: center; }
+  .craft-table { padding-top: 3rem; border-radius: 1.2rem; }
+  .craft-pencil { font-size: 2.4rem; left: .3rem; bottom: 3rem; }
+  .craft-flower { font-size: 2.6rem; right: .5rem; top: .4rem; }
+  .craft-heart { font-size: 1.7rem; left: .6rem; top: .65rem; }
+}
+
+.masthead .schoolyard {
+  height: clamp(8rem, 22vw, 17rem);
+  background-image: url("assets/buc-giang.svg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-color: #f5f0e4;
+}
+@media (max-width: 600px) {
+  .masthead .schoolyard { height: 10rem; }
+}

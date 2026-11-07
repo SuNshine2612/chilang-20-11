@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 220">
+ <defs>
+  <g id="tree"><path d="M0 0v76" stroke="#a47657" stroke-width="12"/><path d="M-12 24-35 7m42 23 24-24" stroke="#a47657" stroke-width="6"/><path d="M-54-9c-30-45 7-79 35-67 14-38 66-30 68 3 45-9 65 44 31 64-5 35-47 40-65 18-28 18-59 8-69-18Z" fill="#86b791"/><circle cx="-22" cy="-53" r="9" fill="#bbd79d"/></g>
+  <g id="kid"><circle cy="-46" r="14" fill="#f1bc91"/><path d="M-14-47q-1-23 19-17 13 5 9 19-7-2-13-12-3 9-15 10" fill="#5f4351"/><path d="M-10-28q10-7 20 0l6 33h-32Z" fill="currentColor"/><path d="m-10-23-17 13-13-8m50-6 22-5 8-12" stroke="#f1bc91" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M-8 7-17 32m25-25 16 20" stroke="#69507c" stroke-width="8" stroke-linecap="round"/><path d="m-22 33 9 1m7-69 6 3 6-3" stroke="#65494b" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+  <g id="daisy"><path d="M0 0v32m0-8q-17-13-17-2 8 10 17 7" fill="#5d9b6c" stroke="#5d9b6c" stroke-width="3"/><path d="M0-8c-15-17-26 4-11 9-16 12 3 25 12 11 12 16 28-3 12-12C29-12 8-24 0-8Z" fill="currentColor"/><circle r="5" cy="2" fill="#ffda74"/></g>
+ </defs>
+ <path d="M0 143Q190 113 380 148t385-5q210-40 435-4v81H0Z" fill="#d2e8bd"/>
+ <path d="M0 181q284-47 505 3t695-5v41H0Z" fill="#aed1a4"/>
+ <path d="m405 168 184-53 167 53-138 52H420Z" fill="#f7dfb7"/>
+ <g stroke="#8d7380" stroke-width="3" stroke-linejoin="round">
+  <path d="M495 65h214v98H495Z" fill="#ffe3a7"/>
+  <path d="m480 70 37-43h177l31 43Z" fill="#df9b9d"/>
+  <path d="M573 163V64l30-27 31 27v99" fill="#ffd385"/>
+  <path d="M590 163v-37q13-14 26 0v37" fill="#a18bbd"/>
+  <path d="M513 94h30v29h-30zm145 0h30v29h-30Z" fill="#badfe7"/>
+  <circle cx="603" cy="89" r="13" fill="#fff8df"/><path d="M603 82v8h7" fill="none"/>
+ </g>
+ <use href="#tree" transform="translate(106 100) scale(.9)"/>
+ <use href="#tree" transform="translate(1090 95)"/>
+ <use href="#kid" transform="translate(260 156) rotate(-8)" color="#e69eb9"/>
+ <use href="#kid" transform="translate(345 155) rotate(9) scale(.88)" color="#91bbd5"/>
+ <use href="#kid" transform="translate(857 151) rotate(-8) scale(.95)" color="#c2a5dd"/>
+ <use href="#kid" transform="translate(939 155) rotate(10)" color="#f4c567"/>
+ <circle cx="811" cy="177" r="12" fill="#f1b499" stroke="#bf8a73" stroke-width="2"/>
+ <path d="m804 168 10 17m-14-5 22-5" stroke="#fff5dc" stroke-width="2"/>
+ <use href="#daisy" transform="translate(35 170) scale(.8)" color="#e8a2c0"/>
+ <use href="#daisy" transform="translate(162 185) scale(.65)" color="#b9a1d7"/>
+ <use href="#daisy" transform="translate(1009 186) scale(.7)" color="#f4ab94"/>
+ <use href="#daisy" transform="translate(1167 169)" color="#e8a2c0"/>
+ <path d="M181 35q23-17 46 0m770-4q15-14 30 0" stroke="#99b8b3" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
