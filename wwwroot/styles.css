@@ -61,13 +61,26 @@ h1{font-size:clamp(3.35rem,7.1vw,6.4rem);margin:.15em 0 .16em}h1 em{color:var(--
 .book{max-width:730px;margin:auto;background:var(--white);border:2px solid #cdb2e5;border-left:12px solid #9670c5;border-radius:1.1rem;box-shadow:0 8px #d8c1ec;overflow:hidden}.book article{padding:1.4rem clamp(1rem,5vw,3rem);min-height:15rem;background:repeating-linear-gradient(transparent 0 31px,#ebe4f3 31px 32px);background-position:0 18px}.book article p.body{line-height:2rem}.book-controls{display:flex;align-items:center;justify-content:space-between;gap:.4rem;padding:.8rem;background:#f9f2ff;font-size:.86rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:1.3rem}.art-card,.memory{background:var(--white);border:1px solid var(--line);border-radius:1rem;box-shadow:0 5px #34234713}.art-card{padding:.65rem;text-align:left;display:grid;gap:.5rem}.art-card:hover{transform:translateY(-4px)}.art-card img{width:100%;aspect-ratio:4/3;object-fit:contain;border-radius:.65rem;background:#f4edfb}.art-card strong{padding:.15rem .5rem .35rem}
 .memory{padding:1.3rem 1.4rem;border-top:6px solid #f1a6a1}.memory h3,.flower-story h3,.book h3{margin-bottom:.4rem;font-size:1.3rem}.body{white-space:pre-line;overflow-wrap:anywhere;margin-bottom:0}
+.tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:.65rem;margin:0 auto 1.35rem}.tab{border:2px solid #d5b9e8;border-radius:999px;padding:.65rem 1.1rem;background:#fffdf8;color:var(--ink);font:inherit;font-weight:750;cursor:pointer;box-shadow:0 3px #34234712;transition:transform .2s ease,background-color .2s ease,box-shadow .2s ease}.tab:hover,.tab[aria-selected=true]{transform:translateY(-2px);background:#ffebae;border-color:#d5a83b;box-shadow:0 5px #34234719}.tab:focus-visible{outline:3px solid #7a50a3;outline-offset:3px}.tab-panel[hidden]{display:none}.video-card{overflow:hidden;padding:.65rem;background:var(--white);border:1px solid var(--line);border-radius:1rem;box-shadow:0 5px #34234713}.video-card video{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:.65rem;background:#30263c}.video-card h3{margin:.75rem .4rem .3rem;font-size:1rem}
+#ky-niem .video-feature{max-width:920px;margin:0 auto 1.6rem;padding:1rem;display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr);align-items:center;gap:1.2rem;background:#fffdf8;border:2px solid #f0b4a0;border-radius:1.4rem;box-shadow:0 7px #8e5c4620}.video-feature-copy{padding:clamp(.5rem,2vw,1.2rem)}.video-feature-copy .label{color:#9f4a68}.video-feature-copy h3{font-family:"Playfair Display",Georgia,serif;font-size:clamp(1.5rem,3vw,2.2rem);margin:.35rem 0}.video-feature-copy p:last-child{margin:0;color:var(--muted)}.video-feature video{display:block;width:100%;max-height:430px;aspect-ratio:16/10;object-fit:cover;border-radius:1rem;background:#30263c}
+.album-slide{display:grid;justify-items:center;gap:.6rem}.album-slide img{width:100%;max-height:64vh;object-fit:contain;background:#f7f1e7;border-radius:.7rem}.album-caption{margin:0;text-align:center;font-weight:750}.album-controls{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.55rem;margin-top:.8rem}.album-position{min-width:3.5rem;text-align:center;font-weight:750;color:var(--muted)}
+.art-card-media,.album-media{position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(110deg,#f3eaf7 8%,#fff8eb 18%,#f3eaf7 33%);background-size:200% 100%;border-radius:.65rem}.art-card-media{width:100%;aspect-ratio:4/3}.art-card-media img{width:100%;height:100%;aspect-ratio:auto}.album-media{width:100%;min-height:12rem;max-height:66vh}.album-media img{position:relative;z-index:1}.image-status{position:absolute;z-index:2;display:flex;align-items:center;gap:.55rem;padding:.45rem .75rem;border-radius:999px;background:#fffdf1e8;color:var(--ink);font-size:.88rem;font-weight:700;box-shadow:0 2px 10px #33234d19}.image-status::before{width:.85rem;height:.85rem;border:2px solid #d7c8e4;border-top-color:#8759a8;border-radius:50%;content:"";animation:image-spin .8s linear infinite}.is-error .image-status{color:#8b344d}.is-error .image-status::before{display:none}.is-error{background:#fbe9e8}.art-card-media.is-loading,.album-media.is-loading{animation:image-shimmer 1.5s ease-in-out infinite}.image-status[hidden]{display:none}@keyframes image-spin{to{transform:rotate(360deg)}}@keyframes image-shimmer{to{background-position:-200% 0}}
+#making-gallery img,#school-gallery img{object-fit:cover}.writing-snippet{padding:.4rem .5rem .65rem;color:var(--muted);font-size:.95rem;line-height:1.65}
 .notes{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:1rem}.notes li{background:#ffe495;padding:1.15rem;border-radius:.3rem 1rem .3rem .3rem;box-shadow:0 4px #34234714;font-weight:650}.notes li:nth-child(3n+2){background:#ffd7e4}.notes li:nth-child(3n+3){background:#dceafc}
 .flowers{display:flex;justify-content:center;flex-wrap:wrap;gap:.7rem}.flower{border:1px solid #98bd9e;background:#fffdf7;border-radius:1rem;padding:.55rem .85rem;font-weight:750}.flower[aria-pressed=true]{background:#fff0af;border-color:#8a6820}.flower-story{max-width:620px;margin:1.25rem auto 0;padding:1.15rem 1.5rem;border-radius:1rem;background:#fffdf7;border:1px solid #afd0b2}
 .creative{text-align:center}.postcard{display:inline-grid;gap:.2rem;justify-items:center;min-width:min(100%,18rem);background:#ffdfed;border:2px dashed #b84c80;border-radius:1.15rem;padding:1.2rem 2rem;box-shadow:0 6px #edbcd2;transform:rotate(-2deg)}.postcard:hover{transform:rotate(0)}.postcard strong{font-family:"Playfair Display",Georgia,serif;font-size:1.75rem;font-weight:600}
 footer{background:#33234d;color:#fff5e5}.footer p{margin:0;font-size:.85rem}.footer a{font-weight:750}
 dialog{width:min(650px,calc(100% - 2rem));max-height:85vh;border:2px solid #bd9ed8;border-radius:1.25rem;padding:1.3rem;background:var(--white);color:var(--ink)}dialog::backdrop{background:#261934b5}dialog form{display:flex;justify-content:flex-end;margin-bottom:.3rem}dialog img{margin:auto;max-height:58vh;object-fit:contain}
+dialog{width:min(1000px,calc(100% - 2rem));scrollbar-width:thin;scrollbar-color:#85bf8a #edf5e9}dialog::-webkit-scrollbar,#dialog-content::-webkit-scrollbar{width:8px}dialog::-webkit-scrollbar-track,#dialog-content::-webkit-scrollbar-track{background:#edf5e9;border-radius:1rem}dialog::-webkit-scrollbar-thumb,#dialog-content::-webkit-scrollbar-thumb{background:#85bf8a;border:2px solid #edf5e9;border-radius:1rem}dialog.is-album{width:min(1120px,calc(100% - 2rem));height:min(92dvh,900px);max-height:calc(100dvh - 1.2rem);display:flex;flex-direction:column;gap:.45rem;overflow:hidden;border:6px solid #8acb8d;border-radius:1.5rem;padding:1.1rem 1.25rem 1rem;background:#fffdfd;box-shadow:0 18px 60px #10201650}dialog.is-album form{position:absolute;z-index:5;top:.55rem;right:.6rem;margin:0}dialog.is-album .close{width:2.6rem;height:2.6rem;padding:0;border:0;background:#fff;color:#787878;font-size:1.8rem;line-height:1;box-shadow:none}dialog.is-album .close:hover{background:#ffe3ed;color:#ad3769;transform:rotate(90deg)}dialog.is-album #dialog-content{display:flex;flex:1;min-height:0;overflow:hidden}dialog.is-album .album-slide{width:100%;height:100%;min-height:0;grid-template-rows:minmax(0,1fr) auto;gap:.45rem}dialog.is-album .album-media{height:100%;min-height:0;max-height:none;background:#fbfaf5}dialog.is-album .album-slide img{width:100%;height:100%;max-height:none}dialog.is-album .album-caption{color:#d73372;font-size:clamp(1rem,2vw,1.3rem)}dialog.is-album .album-controls{flex:0 0 auto;margin:0;padding:.1rem 0 .15rem}
+.album-arrow{position:absolute;z-index:4;top:50%;display:grid;place-items:center;width:3.5rem;height:3.5rem;padding:0;border:2px solid #7b283f;border-radius:50%;background:#f23e7c;color:#fff;font:800 2.35rem/1 system-ui;box-shadow:0 5px 12px #2e1d2d46;transform:translateY(-50%);transition:transform .18s ease,background-color .18s ease,box-shadow .18s ease}.album-arrow:hover{background:#d92366;box-shadow:0 7px 16px #2e1d2d55;transform:translateY(-50%) scale(1.09)}.album-arrow:focus-visible{outline:3px solid #672c85;outline-offset:3px}.album-arrow-prev{left:.8rem}.album-arrow-next{right:.8rem}.album-play{min-width:9rem;border-color:#83bb86;background:#f4fff1;color:#276a3b}.album-play:hover{background:#def6dc}
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:700px){.hero{grid-template-columns:1fr;gap:1.6rem;padding-block:2.5rem}.cover-art{transform:none}.footer{align-items:flex-start;flex-direction:column}.edition{font-size:.65rem}}
+@media(max-width:700px){#ky-niem .video-feature{grid-template-columns:1fr;gap:.25rem}.video-feature-copy{padding:.45rem .6rem}.video-feature video{max-height:55vh}}
+@media(max-width:520px){.tabs{display:grid;grid-template-columns:1fr;width:100%}.tab{width:100%;text-align:center}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}.art-card{padding:.45rem}.art-card strong{font-size:.84rem;line-height:1.3}.video-card{padding:.45rem}.album-controls{gap:.4rem}.album-controls .button{padding:.55rem .75rem;font-size:.9rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.petal{animation:none}}
+@media(prefers-reduced-motion:reduce){.flower-rain{display:none}.album-arrow,.album-play{transition:none!important}}
+@media(max-width:600px){dialog.is-album{width:calc(100% - 1rem);height:min(90dvh,780px);max-height:calc(100dvh - 1rem);border-width:4px;border-radius:1.1rem;padding:.8rem}.album-arrow{width:2.8rem;height:2.8rem;font-size:2rem}.album-arrow-prev{left:.45rem}.album-arrow-next{right:.45rem}}
+@media(prefers-reduced-motion:reduce){.art-card-media.is-loading,.album-media.is-loading{animation:none}.image-status::before{animation:none}}
 
 .back-top {
   position: fixed;
@@ -617,4 +630,120 @@ footer {
 @media (prefers-reduced-motion: reduce) { .music-note { animation: none !important; } }
 @media (max-width: 600px) {
   .masthead .schoolyard { height: 10rem; }
+}
+
+/* Keep the album image, arrows and controls centered as one vertical layout. */
+dialog.is-album #dialog-content { flex-direction: column; align-items: stretch; }
+dialog.is-album .album-slide { flex: 1 1 auto; width: 100%; height: auto; min-width: 0; }
+dialog.is-album .album-media { flex: 1 1 auto; width: 100%; }
+dialog.is-album .album-controls { width: 100%; justify-content: center; }
+
+/* Tiny CSS blossoms drift down the page; three carry a little ten-point mark. */
+.flower-rain { position: fixed; z-index: 3; inset: 0; overflow: hidden; pointer-events: none; }
+.flower-rain span {
+  position: absolute; top: -7vh; left: var(--flower-x); width: 27px; height: 27px;
+  border-radius: 50%; opacity: .76;
+  background:
+    radial-gradient(ellipse 28% 39% at 50% 13%, var(--flower-petal, #f29cba) 0 92%, transparent 100%),
+    radial-gradient(ellipse 28% 39% at 82% 32%, var(--flower-petal, #f29cba) 0 92%, transparent 100%),
+    radial-gradient(ellipse 28% 39% at 82% 68%, var(--flower-petal, #f29cba) 0 92%, transparent 100%),
+    radial-gradient(ellipse 28% 39% at 50% 87%, var(--flower-petal, #f29cba) 0 92%, transparent 100%),
+    radial-gradient(ellipse 28% 39% at 18% 68%, var(--flower-petal, #f29cba) 0 92%, transparent 100%),
+    radial-gradient(ellipse 28% 39% at 18% 32%, var(--flower-petal, #f29cba) 0 92%, transparent 100%),
+    radial-gradient(circle at 50% 50%, var(--flower-center, #ffd86e) 0 20%, transparent 23%);
+  filter: drop-shadow(0 1px 1px #60345036);
+  animation: flower-fall var(--flower-duration, 22s) var(--flower-delay, 0s) linear infinite;
+}
+.flower-rain span::after { content: ""; }
+.flower-rain .flower-ten::after {
+  content: "10"; position: absolute; inset: 0; display: grid; place-items: center;
+  color: #71482e; font: 900 7px/1 system-ui, sans-serif; text-shadow: 0 0 2px #fff4c8;
+}
+.flower-rain span:nth-child(1) { --flower-x: 5%; --flower-delay: -12s; --flower-duration: 22s; --flower-drift: 10vw; --flower-spin: 360deg; }
+.flower-rain span:nth-child(2) { --flower-x: 17%; --flower-delay: -3s; --flower-duration: 19s; --flower-drift: -8vw; --flower-spin: 180deg; --flower-petal: #ed9bc5; --flower-center: #ffe486; }
+.flower-rain span:nth-child(3) { --flower-x: 29%; --flower-delay: -15s; --flower-duration: 24s; --flower-drift: 12vw; --flower-spin: 540deg; --flower-petal: #cda5df; }
+.flower-rain span:nth-child(4) { --flower-x: 42%; --flower-delay: -8s; --flower-duration: 20s; --flower-drift: -11vw; --flower-spin: 360deg; --flower-petal: #f3aec2; }
+.flower-rain span:nth-child(5) { --flower-x: 55%; --flower-delay: -18s; --flower-duration: 25s; --flower-drift: 8vw; --flower-spin: 180deg; --flower-petal: #ffd17a; --flower-center: #fff0a5; }
+.flower-rain span:nth-child(6) { --flower-x: 68%; --flower-delay: -6s; --flower-duration: 21s; --flower-drift: -13vw; --flower-spin: 540deg; --flower-petal: #cda5df; }
+.flower-rain span:nth-child(7) { --flower-x: 79%; --flower-delay: -14s; --flower-duration: 23s; --flower-drift: 10vw; --flower-spin: 360deg; --flower-petal: #ed9bc5; }
+.flower-rain span:nth-child(8) { --flower-x: 91%; --flower-delay: -9s; --flower-duration: 20s; --flower-drift: -9vw; --flower-spin: 180deg; --flower-petal: #ffd17a; --flower-center: #fff0a5; }
+.flower-rain span:nth-child(9) { --flower-x: 98%; --flower-delay: -20s; --flower-duration: 26s; --flower-drift: -14vw; --flower-spin: 540deg; --flower-petal: #cda5df; }
+@keyframes flower-fall { to { transform: translate3d(var(--flower-drift, 8vw), 115vh, 0) rotate(var(--flower-spin, 360deg)); } }
+@media (prefers-reduced-motion: reduce) { .flower-rain { display: none; } }
+
+/* Draw recognizable six-petal flowers rather than round gradient dots. */
+.flower-rain > span {
+  width: 46px; height: 46px; border-radius: 0; background: none; filter: none;
+  opacity: .92;
+}
+.flower-rain > span > i {
+  position: absolute; top: 3px; left: 17px; width: 12px; height: 21px;
+  border: 1px solid #9e5671a8; border-radius: 55% 55% 48% 48%;
+  background: var(--flower-petal, #f29cba);
+  transform-origin: 6px 20px;
+}
+.flower-rain > span > i:nth-of-type(2) { transform: rotate(60deg); }
+.flower-rain > span > i:nth-of-type(3) { transform: rotate(120deg); }
+.flower-rain > span > i:nth-of-type(4) { transform: rotate(180deg); }
+.flower-rain > span > i:nth-of-type(5) { transform: rotate(240deg); }
+.flower-rain > span > i:nth-of-type(6) { transform: rotate(300deg); }
+.flower-rain > span::after {
+  content: ""; position: absolute; z-index: 1; left: 13px; top: 13px;
+  width: 20px; height: 20px; border: 1px solid #a2793f;
+  border-radius: 50%; background: var(--flower-center, #ffda6c);
+  box-shadow: inset 0 0 0 2px #fff6cf;
+}
+.flower-rain > span.flower-ten > b {
+  position: absolute; z-index: 2; left: 50%; top: 50%;
+  color: #684322; font: 1000 13px/1 system-ui, sans-serif;
+  text-shadow: 0 1px #fff1c3; transform: translate(-50%, -50%);
+}
+.flower-rain > span:nth-child(1) { --flower-x: 5%; --flower-spin: 360deg; }
+.flower-rain > span:nth-child(2) { --flower-x: 16%; --flower-spin: 0deg; }
+.flower-rain > span:nth-child(3) { --flower-x: 27%; --flower-spin: 360deg; }
+.flower-rain > span:nth-child(4) { --flower-x: 38%; --flower-spin: 360deg; }
+.flower-rain > span:nth-child(5) { --flower-x: 49%; --flower-spin: 0deg; }
+.flower-rain > span:nth-child(6) { --flower-x: 60%; --flower-spin: 360deg; }
+.flower-rain > span:nth-child(7) { --flower-x: 71%; --flower-spin: 360deg; }
+.flower-rain > span:nth-child(8) { --flower-x: 82%; --flower-spin: 0deg; }
+.flower-rain > span:nth-child(9) { --flower-x: 92%; --flower-spin: 360deg; }
+
+/* Keep the full photograph and its caption/buttons within the dialog viewport. */
+dialog.is-album { height: min(88dvh, 860px); max-height: calc(100dvh - 2rem); }
+dialog.is-album #dialog-content { flex-direction: column; align-items: stretch; }
+dialog.is-album .album-slide {
+  display: grid; flex: 1 1 auto; width: 100%; height: auto; min-height: 0;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+dialog.is-album .album-media { width: 100%; height: 100%; min-height: 0; max-height: none; }
+dialog.is-album .album-slide img {
+  width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain;
+}
+dialog.is-album .album-controls { width: 100%; justify-content: center; }
+.album-arrow svg { display: block; width: 1.45rem; height: 1.45rem; overflow: visible; }
+.album-arrow svg path { fill: none; stroke: currentColor; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
+dialog.is-album .close svg { display: block; width: 1.35rem; height: 1.35rem; }
+dialog.is-album .close svg path { fill: none; stroke: currentColor; stroke-width: 3.2; stroke-linecap: round; }
+@media (max-width: 600px) {
+  dialog.is-album { height: min(88dvh, 760px); }
+  .flower-rain > span { transform: scale(.82); }
+  .album-arrow { width: 3rem; height: 3rem; }
+}
+
+/* Give every dialog a visible, consistently centered close control. */
+dialog:not(.is-album) { position: fixed; width: min(820px, calc(100% - 2rem)); max-height: min(88dvh, 860px); overflow-y: auto; padding: 3.25rem clamp(1rem, 3vw, 1.6rem) 1.35rem; }
+dialog:not(.is-album) form { position: absolute; z-index: 5; top: .6rem; right: .65rem; margin: 0; }
+dialog:not(.is-album) .close { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; padding: 0; border: 1px solid #efb8d0; border-radius: 50%; background: #ffe7f0; color: #a93768; box-shadow: 0 3px 8px #33234720; font-size: 1.5rem; }
+dialog:not(.is-album) .close:hover { background: #ffd3e4; transform: rotate(90deg); }
+dialog:not(.is-album) .close svg { display: block; width: 1.3rem; height: 1.3rem; }
+dialog:not(.is-album) .close svg path { fill: none; stroke: currentColor; stroke-width: 3.2; stroke-linecap: round; }
+dialog.is-card { width: min(880px, calc(100% - 2rem)); }
+dialog.is-card #dialog-content { display: grid; justify-items: center; gap: .8rem; }
+dialog.is-card .card-envelope { margin: .2rem auto 0; transform: scale(1.12); }
+dialog.is-card #dialog-content img { width: min(100%, 42rem); max-height: 47dvh; height: auto; object-fit: contain; border-radius: .85rem; }
+dialog.is-card #dialog-content p.body { width: min(100%, 45rem); margin: 0; padding: 1rem clamp(1rem, 3vw, 1.6rem); border: 1px dashed #e5a9c0; border-radius: 1rem; background: #fff4f7; text-align: center; line-height: 1.8; }
+@media (max-width: 600px) {
+  dialog:not(.is-album) { width: calc(100% - 1rem); max-height: 90dvh; padding: 3rem .85rem 1rem; }
+  dialog.is-card { width: calc(100% - 1rem); }
+  dialog.is-card #dialog-content img { max-height: 42dvh; }
 }

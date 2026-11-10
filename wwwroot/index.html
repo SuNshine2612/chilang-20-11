@@ -5,11 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fff8e9">
   <title>Khu vườn tri ân · Báo tường 20/11</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="styles.css">
   <script src="content.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
+  <div class="flower-rain" aria-hidden="true">
+    <span><i></i><i></i><i></i><i></i><i></i><i></i></span>
+    <span class="flower-ten"><i></i><i></i><i></i><i></i><i></i><i></i><b>10</b></span>
+    <span><i></i><i></i><i></i><i></i><i></i><i></i></span>
+    <span><i></i><i></i><i></i><i></i><i></i><i></i></span>
+    <span class="flower-ten"><i></i><i></i><i></i><i></i><i></i><i></i><b>10</b></span>
+    <span><i></i><i></i><i></i><i></i><i></i><i></i></span>
+    <span><i></i><i></i><i></i><i></i><i></i><i></i></span>
+    <span class="flower-ten"><i></i><i></i><i></i><i></i><i></i><i></i><b>10</b></span>
+    <span><i></i><i></i><i></i><i></i><i></i><i></i></span>
+  </div>
   <a class="skip" href="#noi-dung">Đến nội dung</a>
   <header class="masthead" id="dau-trang" tabindex="-1">
     <div class="wrap top">
@@ -38,24 +50,24 @@
       <div class="wrap toc-links">
         <a href="#loi-ngo"><span class="toc-icon" aria-hidden="true">💌</span><span>Lời ngỏ</span></a>
         <a href="#van-hoc"><span class="toc-icon" aria-hidden="true">📖</span><span>Văn học</span></a>
-        <a href="#net-ve"><span class="toc-icon" aria-hidden="true">🎨</span><span>Nét vẽ</span></a>
-        <a href="#ky-niem"><span class="toc-icon" aria-hidden="true">🏫</span><span>Kỷ niệm</span></a>
+        <a href="#net-ve"><span class="toc-icon" aria-hidden="true">🎨</span><span>Triển lãm của em</span></a>
+        <a href="#ky-niem"><span class="toc-icon" aria-hidden="true">🏫</span><span>Kỷ niệm dưới mái trường</span></a>
         <a href="#loi-chuc"><span class="toc-icon" aria-hidden="true">💐</span><span>Lời chúc</span></a>
         <a href="#viec-tot"><span class="toc-icon" aria-hidden="true">🌻</span><span>Việc tốt</span></a>
         <a href="#sang-tao"><span class="toc-icon" aria-hidden="true">✏️</span><span>Sáng tạo</span></a>
       </div>
     </nav>
-    <div class="wrap sample"><strong>Bản mẫu để lớp biên tập.</strong> Bài viết và tranh trên trang là ví dụ minh họa.</div>
+    <div class="wrap sample"><strong>Báo tường đang được cập nhật.</strong> Một số chuyên mục vẫn dùng nội dung mẫu; lớp có thể bổ sung thêm tác phẩm sau.</div>
     <section class="section wrap letter-section" id="loi-ngo" aria-labelledby="title-letter">
       <div class="section-title"><p class="label">02 / BỨC THƯ ĐẦU TRANG</p><h2 id="title-letter">Lời ngỏ yêu thương</h2><p>Một phong thư nhỏ dành riêng cho thầy cô.</p></div>
       <details class="letter">
-        <summary><span class="envelope" aria-hidden="true"><span class="envelope-paper">♥</span></span> Mở thư gửi thầy cô</summary>
+        <summary><span class="envelope" aria-hidden="true"><span class="envelope-paper">♥</span></span> Mở thư gửi cô Mai và thầy cô</summary>
         <div class="letter-body" id="letter-content"></div>
       </details>
     </section>
     <section class="band lilac" id="van-hoc" aria-labelledby="title-books">
       <div class="section wrap">
-        <div class="section-title"><p class="label">03 / TỪ TRANG VỞ NHỎ</p><h2 id="title-books">Trang văn học tuổi thơ</h2><p>Lật từng trang để đọc những vần thơ và câu chuyện nhỏ.</p></div>
+        <div class="section-title"><p class="label">03 / TỪ TRANG VỞ NHỎ</p><h2 id="title-books">Trang văn học tuổi thơ</h2><p>Ba bài viết và lời tri ân của bạn Bùi Huỳnh Yến Nhi.</p></div>
         <div class="book">
           <article id="book-page" aria-live="polite"></article>
           <div class="book-controls"><button class="button" id="book-prev" type="button">← Trang trước</button><span id="book-count"></span><button class="button" id="book-next" type="button">Trang sau →</button></div>
@@ -63,13 +75,31 @@
       </div>
     </section>
     <section class="section wrap" id="net-ve" aria-labelledby="title-gallery">
-      <div class="section-title"><p class="label">04 / HỘP MÀU CỦA EM</p><h2 id="title-gallery">Nét vẽ tri ân</h2><p>Chọn một bức tranh để xem gần hơn.</p></div>
-      <div class="grid gallery" id="gallery"></div>
+      <div class="section-title"><p class="label">04 / HỘI HỌA VÀ TRANG VIẾT NHỎ</p><h2 id="title-gallery">Triển lãm của em</h2><p>Mỗi tác phẩm là một món quà nhỏ gửi đến thầy cô.</p></div>
+      <div class="tabs" role="tablist" aria-label="Nhóm tác phẩm triển lãm">
+        <button class="tab" id="tab-art" type="button" role="tab" aria-selected="true" aria-controls="panel-art" tabindex="0">🖍️ Tranh vẽ, tô màu</button>
+        <button class="tab" id="tab-writing" type="button" role="tab" aria-selected="false" aria-controls="panel-writing" tabindex="-1">📝 Bài viết viết tay</button>
+      </div>
+      <div class="tab-panel" id="panel-art" role="tabpanel" aria-labelledby="tab-art"><div class="grid gallery" id="gallery"></div></div>
+      <div class="tab-panel" id="panel-writing" role="tabpanel" aria-labelledby="tab-writing" hidden><div class="grid gallery" id="writing-gallery"></div></div>
     </section>
     <section class="band peach" id="ky-niem" aria-labelledby="title-memories">
       <div class="section wrap">
-        <div class="section-title"><p class="label">05 / SỔ LƯU BÚT</p><h2 id="title-memories">Kỷ niệm dưới mái trường</h2><p>Gấp góc trang để nhớ mãi những ngày này.</p></div>
-        <div class="grid memories" id="memories"></div>
+        <div class="section-title"><p class="label">05 / SỔ LƯU BÚT</p><h2 id="title-memories">Kỷ niệm dưới mái trường</h2><p>Cùng xem lại lúc chúng em làm báo tường và những ngày vui ở trường.</p></div>
+        <div class="tabs" role="tablist" aria-label="Nhóm kỷ niệm">
+          <button class="tab" id="tab-making" type="button" role="tab" aria-selected="true" aria-controls="panel-making" tabindex="0">✂️ Chúng em làm báo tường</button>
+          <button class="tab" id="tab-school" type="button" role="tab" aria-selected="false" aria-controls="panel-school" tabindex="-1">🏫 Hoạt động ở trường</button>
+          <button class="tab" id="tab-feelings" type="button" role="tab" aria-selected="false" aria-controls="panel-feelings" tabindex="-1">💭 Cảm nghĩ</button>
+        </div>
+        <div class="tab-panel" id="panel-making" role="tabpanel" aria-labelledby="tab-making"><div class="grid gallery" id="making-gallery"></div></div>
+        <div class="tab-panel" id="panel-school" role="tabpanel" aria-labelledby="tab-school" hidden>
+          <article class="video-feature">
+            <div class="video-feature-copy"><p class="label">KHOẢNH KHẮC NÁO NHIỆT</p><h3>Tiếng cười trong trận kéo co</h3><p>Cùng xem lại một hoạt động thật vui dưới mái trường Chi Lăng!</p></div>
+            <video id="tug-of-war" controls preload="metadata" playsinline aria-label="Video kỷ niệm hoạt động kéo co ở trường"><source src="images/ki-niem-mai-truong/keo-co.mp4" type="video/mp4">Trình duyệt của bạn chưa hỗ trợ phát video.</video>
+          </article>
+          <div class="grid gallery" id="school-gallery"></div>
+        </div>
+        <div class="tab-panel" id="panel-feelings" role="tabpanel" aria-labelledby="tab-feelings" hidden><div class="grid memories" id="memories"></div></div>
       </div>
     </section>
     <section class="section wrap" id="loi-chuc" aria-labelledby="title-wishes">
@@ -90,7 +120,7 @@
         <div class="craft-decoration craft-flower" aria-hidden="true">✿</div>
         <div class="craft-decoration craft-heart" aria-hidden="true">♡</div>
         <span class="craft-tape" aria-hidden="true"></span>
-        <button class="postcard" type="button" id="open-card"><span class="envelope" aria-hidden="true"><span class="envelope-paper">♥</span></span><strong>Gửi thầy cô</strong><small>Mở thiệp 20/11 →</small></button>
+        <button class="postcard" type="button" id="open-card"><span class="envelope" aria-hidden="true"><span class="envelope-paper">♥</span></span><strong>Gửi cô Mai</strong><small>Mở thiệp 20/11 →</small></button>
         <p class="craft-caption">Một nét vẽ nhỏ · Một lời thương lớn</p>
       </div>
     </section>
@@ -109,8 +139,8 @@
     <span class="music-label">Bật nhạc</span>
   </button>
   <dialog id="viewer" aria-labelledby="dialog-title">
-    <form method="dialog"><button class="button close" value="close" aria-label="Đóng" autofocus>×</button></form>
-    <h2 id="dialog-title"></h2><div id="dialog-content"></div>
+    <form method="dialog"><button class="button close" value="close" aria-label="Đóng" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form>
+    <h2 id="dialog-title" class="visually-hidden"></h2><div id="dialog-content"></div>
   </dialog>
 </body>
 </html>
