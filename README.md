@@ -21,6 +21,7 @@ Trang báo tường điện tử của lớp 1/7, Trường Tiểu học Chi Lă
 ### Các nội dung và tính năng đã triển khai
 
 - Các chuyên mục: Lời ngỏ yêu thương, Văn học tuổi thơ, Triển lãm của em, Kỷ niệm dưới mái trường, Lời chúc, Việc tốt và Góc sáng tạo của em.
+- Mục Bông hoa việc tốt có thêm 4 câu chuyện mẫu: chia sẻ bút màu, xếp sách, phụ cô phát vở và chào buổi sáng; học sinh nên chỉnh lời kể cho đúng trải nghiệm thật trước khi giới thiệu như chuyện của mình.
 - Thanh menu cố định, liên kết cuộn đến từng chuyên mục; các hiệu ứng xuất hiện khi cuộn được kích hoạt lại khi điều hướng đến mục.
 - Trình xem ảnh phóng lớn có nút đóng, xem ảnh trước/sau, tự chạy và tạm dừng; ảnh được tải trì hoãn để giảm tải ban đầu.
 - Ảnh dọc trong album được căn vừa khung để xem trọn ảnh, không bị cắt mất nội dung.
