@@ -24,6 +24,10 @@
     <path d="M124 394q108-40 195 19 85-59 194-26l-22 62q-92-23-172 24-75-46-178-21Z" fill="#fff0cf"/>
     <path d="M319 413v60m-153-63q73-20 125 14m-117 4q66-15 113 13m57-17q60-32 126-20m-121 37q58-27 114-18" fill="none" stroke="#d3a682" stroke-width="3"/>
   </g>
+  <g aria-label="Trường Tiểu học Chi Lăng">
+    <rect x="256" y="240" width="126" height="22" rx="4" fill="#fff1d2" stroke="#694971" stroke-width="2"/>
+    <text x="319" y="255" fill="#624761" font-family="Arial,sans-serif" font-size="8.5" font-weight="bold" text-anchor="middle">Trường Tiểu học Chi Lăng</text>
+  </g>
   <use href="#flower" transform="translate(108 369) rotate(-17) scale(.87)" color="#f4a3be"/>
   <use href="#flower" transform="translate(532 370) rotate(11)" color="#ffab85"/>
   <use href="#flower" transform="translate(589 418) rotate(18) scale(.7)" color="#c4a7ed"/>

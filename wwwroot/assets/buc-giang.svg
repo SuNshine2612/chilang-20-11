@@ -51,4 +51,8 @@
   <use href="#pupil" transform="translate(80 246) scale(.8)"/>
   <use href="#pupil" transform="translate(1120 246) scale(.8)"/>
   <path d="m245 53 8 8-8 8-8-8Zm700 0 8 8-8 8-8-8Z" fill="#e1afbd"/>
+  <g aria-label="Lớp 1/7, Trường Tiểu học Chi Lăng">
+    <rect x="386" y="237" width="428" height="31" rx="9" fill="#fff2d7" stroke="#b99576" stroke-width="2"/>
+    <text x="600" y="258" fill="#604957" font-family="Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Lớp 1/7 · Trường Tiểu học Chi Lăng</text>
+  </g>
 </svg>
