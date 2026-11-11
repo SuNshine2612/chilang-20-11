@@ -23,7 +23,8 @@ const newspaper = {
         { title: "Bùi Ngọc Tường Linh", src: "images/tranh/trang-bui-ngoc-tuong-linh.jpg", alt: "Tranh vẽ của Bùi Ngọc Tường Linh" },
         { title: "Nguyễn Thị Minh Khanh", src: "images/tranh/trang-minh-khanh.jpg", alt: "Tranh vẽ của Nguyễn Thị Minh Khanh" },
         { title: "Vũ Minh Diệp Chi", src: "images/tranh/trang-vu-minh-diep-chi-1.jpg", alt: "Tranh vẽ của Vũ Minh Diệp Chi" },
-        { title: "Phạm Ngô Duy Minh", src: "images/tranh/tranh-pham-ngo-duy-minh.jpg", alt: "Tranh vẽ của Phạm Ngô Duy Minh" }
+        { title: "Phạm Ngô Duy Minh", src: "images/tranh/tranh-pham-ngo-duy-minh.jpg", alt: "Tranh vẽ của Phạm Ngô Duy Minh" },
+        { title: "Thái Quốc An", src: "images/tranh/tranh-thai-quoc-an.jpg", alt: "Tranh vẽ của Thái Quốc An" }
     ],
     exhibitionWriting: [
         { title: "Kỷ niệm đầu tiên", author: "Bùi Huỳnh Yên Nhi", src: "images/tranh/tranh-yen-nhi-2.png", alt: "Trang viết tay kỷ niệm đầu tiên của Bùi Huỳnh Yên Nhi" },
