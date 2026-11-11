@@ -26,6 +26,7 @@ a{color:inherit}button{font:inherit;color:inherit;cursor:pointer}img{display:blo
 .edition,.label{font-size:.76rem;font-weight:850;letter-spacing:.11em}.edition{white-space:nowrap}.edition b{background:#ffd876;padding:.25rem .55rem;border-radius:6px;margin-left:.3rem}
 .hero{display:grid;grid-template-columns:1fr 1.12fr;align-items:center;gap:2.2rem;padding-block:4rem}
 .label{color:#684296;margin:0 0 .7rem}.event{background:#ffedb6;border:1px solid #eacb75;padding:.45rem .75rem;border-radius:.5rem;display:inline-block;letter-spacing:.065em}
+.event{font-size:clamp(.78rem,1.05vw,.88rem);letter-spacing:.055em}
 h1,h2,h3,p{margin-top:0}h1,h2{font-family:"Playfair Display",Georgia,serif;line-height:1.22;font-weight:600}
 h1{font-size:clamp(3.35rem,7.1vw,6.4rem);margin:.15em 0 .16em}h1 em{color:var(--purple);font-style:italic}h1 span{color:#bc5678;font:normal .38em/1 system-ui;vertical-align:top}
 .deck{color:#923759;font-weight:800;font-size:clamp(1.25rem,3vw,1.8rem);margin-bottom:.35em}.intro{color:var(--muted);max-width:36ch}
@@ -548,6 +549,7 @@ main section[id] { scroll-margin-top: calc(var(--toc-height, 4rem) + .75rem); }
   padding: .3rem .65rem;
   border-radius: 1rem;
   background: #fffdf7d9;
+  font-size: clamp(1.02rem, 1.4vw, 1.12rem);
 }
 footer {
   background: #eaf4dc;
