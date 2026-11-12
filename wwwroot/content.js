@@ -57,13 +57,13 @@ const newspaper = {
         "Chúng em sẽ chăm đọc sách để có nhiều chuyện kể thầy nghe."
     ],
     goodDeeds: [
-        { icon: "✿", title: "Cùng bạn đọc sách", body: "Trong giờ đọc, hai bạn thay phiên nhau đọc mỗi người một đoạn. Gặp chữ khó, cả hai cùng đánh vần rồi đọc lại cả câu." },
-        { icon: "❀", title: "Giữ lớp sạch đẹp", body: "Cuối buổi, mỗi tổ nhặt giấy quanh bàn mình. Một bạn nhắc cả tổ xếp ghế ngay ngắn để sáng mai vào lớp thật gọn gàng." },
-        { icon: "✽", title: "Chăm cây mỗi sáng", body: "Tổ em thay phiên tưới cây bên cửa sổ. Chúng em ghi ngày tưới vào một mảnh giấy nhỏ để nhớ lượt của nhau." },
-        { icon: "✿", title: "Chia sẻ hộp bút màu", body: "Hôm nay bạn ngồi cạnh quên mang bút màu. Em mời bạn dùng chung hộp bút của mình, hai đứa cùng tô bức tranh thật vui. Bạn cảm ơn, em cũng thấy vui trong lòng." },
-        { icon: "❀", title: "Xếp sách sau giờ đọc", body: "Đọc sách xong, em cùng các bạn xếp sách ngay ngắn lên kệ. Nhìn góc thư viện gọn gàng, em mong ngày mai chúng em lại được chọn thêm nhiều cuốn sách hay." },
-        { icon: "✽", title: "Giúp cô phát vở", body: "Đầu giờ, em phụ cô phát vở cho các bạn trong tổ. Em đưa vở bằng hai tay và nhắc bạn nào còn thiếu. Cô mỉm cười khen, em thấy mình đã làm được một việc nhỏ có ích." },
-        { icon: "✿", title: "Một lời chào buổi sáng", body: "Sáng đến trường, em lễ phép chào thầy cô và bác bảo vệ. Em còn nhặt chiếc lá rơi trước cửa lớp bỏ vào thùng rác. Sân trường sạch hơn, ngày mới của em cũng bắt đầu thật vui." }
+        { icon: "✿", image: "images/viec-tot/cung-ban-doc-sach.webp", title: "Cùng bạn đọc sách", body: "Trong giờ đọc, hai bạn thay phiên nhau đọc mỗi người một đoạn. Gặp chữ khó, cả hai cùng đánh vần rồi đọc lại cả câu." },
+        { icon: "❀", image: "images/viec-tot/giu-lop-sach-dep.webp", title: "Giữ lớp sạch đẹp", body: "Cuối buổi, mỗi tổ nhặt giấy quanh bàn mình. Một bạn nhắc cả tổ xếp ghế ngay ngắn để sáng mai vào lớp thật gọn gàng." },
+        { icon: "✽", image: "images/viec-tot/cham-cay-moi-sang.webp", title: "Chăm cây mỗi sáng", body: "Tổ em thay phiên tưới cây bên cửa sổ. Chúng em ghi ngày tưới vào một mảnh giấy nhỏ để nhớ lượt của nhau." },
+        { icon: "✿", image: "images/viec-tot/chia-se-but-mau.webp", title: "Chia sẻ hộp bút màu", body: "Hôm nay bạn ngồi cạnh quên mang bút màu. Em mời bạn dùng chung hộp bút của mình, hai đứa cùng tô bức tranh thật vui. Bạn cảm ơn, em cũng thấy vui trong lòng." },
+        { icon: "❀", image: "images/viec-tot/xep-sach-sau-gio-doc.webp", title: "Xếp sách sau giờ đọc", body: "Đọc sách xong, em cùng các bạn xếp sách ngay ngắn lên kệ. Nhìn góc thư viện gọn gàng, em mong ngày mai chúng em lại được chọn thêm nhiều cuốn sách hay." },
+        { icon: "✽", image: "images/viec-tot/giup-co-phat-vo.webp", title: "Giúp cô phát vở", body: "Đầu giờ, em phụ cô phát vở cho các bạn trong tổ. Em đưa vở bằng hai tay và nhắc bạn nào còn thiếu. Cô mỉm cười khen, em thấy mình đã làm được một việc nhỏ có ích." },
+        { icon: "✿", image: "images/viec-tot/loi-chao-buoi-sang.webp", title: "Một lời chào buổi sáng", body: "Sáng đến trường, em lễ phép chào thầy cô và bác bảo vệ. Em còn nhặt chiếc lá rơi trước cửa lớp bỏ vào thùng rác. Sân trường sạch hơn, ngày mới của em cũng bắt đầu thật vui." }
     ],
     card: {
         title: "Gửi cô Mai và các thầy cô", src: "assets/bo-hoa.svg", alt: "Bó hoa giấy tặng cô Mai và các thầy cô",

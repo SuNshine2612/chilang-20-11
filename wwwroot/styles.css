@@ -817,3 +817,24 @@ dialog.is-card #dialog-content p.body { width: min(100%, 45rem); margin: 0; padd
   dialog.is-card #dialog-content img { max-height: 42dvh; }
   dialog.is-album .album-media { height: min(56dvh, 460px); max-height: 56dvh; }
 }
+
+.flower-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  max-width: 880px;
+}
+.flower-story-copy h3 { margin-top: 0; }
+.flower-story-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: .75rem;
+  background: #f3eddf;
+}
+@media (max-width: 650px) {
+  .flower-story { grid-template-columns: minmax(0, 1fr); }
+}

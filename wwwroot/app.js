@@ -290,7 +290,17 @@ function showFlower(selected, deed) {
   for (const button of flowerButtons) {
     button.setAttribute("aria-pressed", String(button === selected));
   }
-  showArticle(flowerStory, deed);
+  const copy = make("div", "", "flower-story-copy");
+  showArticle(copy, deed);
+  const image = document.createElement("img");
+  image.className = "flower-story-image";
+  image.alt = "";
+  image.width = 720;
+  image.height = 480;
+  image.decoding = "async";
+  image.loading = "lazy";
+  image.src = deed.image;
+  flowerStory.replaceChildren(copy, image);
 }
 flowers.append(...flowerButtons);
 showFlower(flowerButtons[0], newspaper.goodDeeds[0]);
