@@ -11,7 +11,7 @@ Trang dùng HTML, CSS, JavaScript thuần và minh họa SVG cục bộ. ASP.NET
 ## Biên tập báo của lớp
 
 1. Mở `wwwroot/content.js` và điền `className`. Thay các bài và lời chúc mẫu bằng nội dung lớp thực hiện. Giữ nguyên các tên trường như `title`, `body` và `kind`. Dùng `\n` để xuống dòng trong thơ.
-2. Chép tranh vào `wwwroot/assets/` rồi cập nhật đường dẫn tương đối `src`, tên tranh `title` và mô tả `alt` trong mục `art`. Thiệp có hình minh họa riêng trong mục `card`.
+2. Chép ảnh tranh và bài viết tay vào `wwwroot/images/tranh/`. Thêm tranh vào `exhibitionArt` và ảnh bài viết tay vào `exhibitionWriting`. Điền `src` theo đường dẫn tương đối từ `wwwroot`, cùng với `title` và `alt`. Với bài viết tay, điền thêm `author`. Thiệp có hình minh họa riêng trong `card`.
 3. Chỉnh tên báo ở bìa, tiêu đề tab và chân trang trong `wwwroot/index.html` nếu lớp chọn tên khác. Giữ dòng tiêu đề 20/11 và năm học trên bìa theo kế hoạch. Bỏ ghi chú bản mẫu sau khi lớp đã thay nội dung minh họa.
 4. Ghi nguồn cho nội dung tham khảo và chỉ công khai thông tin, ảnh hoặc giọng nói học sinh khi đã đáp ứng quy định của trường và có sự đồng ý cần thiết.
 ## Tình trạng dự án báo tường 20/11
@@ -26,11 +26,9 @@ Trang báo tường điện tử của lớp 1/7, Trường Tiểu học Chi Lă
 - Trình xem ảnh phóng lớn có nút đóng, xem ảnh trước/sau, tự chạy và tạm dừng; ảnh được tải trì hoãn để giảm tải ban đầu.
 - Ảnh dọc trong album được căn vừa khung để xem trọn ảnh, không bị cắt mất nội dung.
 - Hiệu ứng cánh hoa rơi nhẹ và điểm xuyết hoa điểm 10; tôn trọng cài đặt giảm chuyển động của thiết bị.
-- Nhạc nền `wwwroot/bui-phan.mp3` có nút điều khiển phát/tạm dừng và âm lượng.
+- Nhạc nền `wwwroot/bui-phan.mp3` có nút phát/tạm dừng.
 - Nội dung lời tri ân dành riêng cho cô Mai và các thầy cô nhân Ngày Nhà giáo Việt Nam 20/11.
 - Giao diện trang trí theo phong cách sổ lưu bút thiếu nhi, màu sắc tươi sáng, có hiệu ứng chuyển động và hỗ trợ màn hình di động.
 - Website được triển khai qua GitHub Pages: https://sunshine2612.github.io/chilang-20-11/.
 
-### Nội dung đang chờ bổ sung
-
-Hai bài thơ mới đã được thêm vào mục Văn học tuổi thơ: “Cô giáo em” của Khánh Trân và “Người gieo hạt” của Vũ Minh Diệp Chi. Phần ảnh JPG mới gửi cho mục Triển lãm của em vẫn đang chờ tích hợp. Chưa commit, push hoặc publish thay đổi này.
+- Hai bài thơ “Cô giáo em” của Trần Hoàng Khánh Trân và “Người gieo hạt” của Vũ Minh Diệp Chi có bản chữ trong Văn học tuổi thơ và ảnh bài viết tay trong Triển lãm của em. Các ảnh JPG bổ sung đã được tích hợp vào triển lãm.
