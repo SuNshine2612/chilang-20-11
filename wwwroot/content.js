@@ -46,8 +46,10 @@ const newspaper = {
         { src: "images/ki-niem-mai-truong/nam-hoc-moi.png", title: "Ngày hội khai trường" }
     ],
     memories: [
-        { title: "Buổi đầu đọc trước lớp", body: "Em đọc nhỏ đến nỗi chỉ bàn đầu nghe thấy. Cô đợi em đọc xong rồi hỏi em thích nhất câu nào. Em đọc lại câu đó to hơn một chút. Lần thứ hai, cả lớp cùng nghe." },
-        { title: "Cây đậu bên cửa sổ", body: "Tuần đầu, cốc đậu của tổ em chưa nhú mầm. Cô nhắc chúng em tưới từng ít một và chờ thêm. Sáng thứ Hai, cả tổ reo lên vì thấy hai chiếc lá bé xíu." }
+        { icon: "📖", title: "Buổi đầu đọc trước lớp", body: "Em đọc nhỏ đến nỗi chỉ bàn đầu nghe thấy. Cô đợi em đọc xong rồi hỏi em thích nhất câu nào. Em đọc lại câu đó to hơn một chút. Lần thứ hai, cả lớp cùng nghe." },
+        { icon: "🌱", title: "Cây đậu bên cửa sổ", body: "Tuần đầu, cốc đậu của tổ em chưa nhú mầm. Cô nhắc chúng em tưới từng ít một và chờ thêm. Sáng thứ Hai, cả tổ reo lên vì thấy hai chiếc lá bé xíu." },
+        { icon: "💗", title: "Em quý cô Mai", body: "Em thích nghe cô Mai đọc mẫu. Cô đọc chậm để chúng em nghe rõ từng tiếng. Có chữ em đọc chưa đúng, cô nhắc nhẹ rồi cho em đọc lại. Nhờ cô, em thấy mình có thể làm được nếu chịu khó tập. Em muốn tự viết một tấm thiệp nhỏ để nói với cô rằng em rất quý cô." },
+        { icon: "🏫", title: "Những ngày đầu vào lớp Một", body: "Mấy ngày đầu tới trường, em còn rụt rè. Giờ ra chơi, em đứng cạnh cửa lớp vì chưa biết rủ ai chơi. Một bạn hỏi em có muốn cùng đi xem sân trường không. Từ hôm đó, em nhớ tên bạn và biết đường ra sân. Bây giờ, mỗi sáng em mong đến lớp để chào cô và gặp các bạn." }
     ],
     wishes: [
         "Chúc thầy cô luôn khỏe và có nhiều ngày vui ở trường!",

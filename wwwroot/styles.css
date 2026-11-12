@@ -838,3 +838,10 @@ dialog.is-card #dialog-content p.body { width: min(100%, 45rem); margin: 0; padd
 @media (max-width: 650px) {
   .flower-story { grid-template-columns: minmax(0, 1fr); }
 }
+
+.memories {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 600px) {
+  .memories { grid-template-columns: minmax(0, 1fr); }
+}

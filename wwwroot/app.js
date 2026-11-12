@@ -235,6 +235,9 @@ const memories = document.querySelector("#memories");
 for (const memory of newspaper.memories) {
   const article = make("article", "", "memory");
   showArticle(article, memory);
+  const icon = make("span", memory.icon + " ");
+  icon.setAttribute("aria-hidden", "true");
+  article.querySelector("h3").prepend(icon);
   memories.append(article);
 }
 
