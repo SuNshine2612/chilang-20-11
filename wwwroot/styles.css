@@ -901,3 +901,77 @@ dialog.is-card #dialog-content p.body { width: min(100%, 45rem); margin: 0; padd
     rotate: calc(var(--photo-tilt) / 2);
   }
 }
+
+#van-hoc .book { border-radius: 1.5rem; }
+#book-page {
+  border-radius: 0 0 1.25rem 1.25rem;
+  padding-block: 1.9rem 2.1rem;
+}
+#book-page::before,
+#book-page::after {
+  content: "";
+  position: absolute;
+  width: clamp(4.8rem, 38%, 17rem);
+  height: clamp(4.4rem, 70%, 9rem);
+  background: url("assets/book-vine.svg") center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+#book-page::before { top: .35rem; left: .35rem; }
+#book-page::after {
+  bottom: .35rem;
+  right: .35rem;
+  transform: rotate(180deg);
+}
+#book-page[data-corners="mirrored"]::before { left: auto; right: .35rem; transform: scaleX(-1); }
+#book-page[data-corners="mirrored"]::after { right: auto; left: .35rem; transform: scaleY(-1); }
+@media (max-width: 520px) {
+  #van-hoc .book { border-left-width: 6px; border-radius: 1.15rem; }
+  #book-page { border-radius: 0 0 .9rem .9rem; }
+  #van-hoc .book-controls { padding-inline: .55rem; }
+  #van-hoc .book-controls .button { padding-inline: .6rem; font-size: .8rem; }
+}
+
+.letter-illustration {
+  display: block;
+  width: min(100%, 21rem);
+  height: auto;
+  margin: .15rem auto 1.35rem;
+}
+#letter-content p {
+  display: grid;
+  grid-template-columns: 1.5rem minmax(0, 1fr);
+  gap: .45rem;
+  white-space: pre-line;
+}
+.letter-icon { text-align: center; }
+@media (max-width: 520px) {
+  .letter-illustration { width: min(100%, 15rem); margin-bottom: .9rem; }
+  #letter-content p { grid-template-columns: 1.15rem minmax(0, 1fr); gap: .35rem; }
+}
+
+.card-portrait {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  width: min(100%, 38rem);
+  padding-inline: clamp(1.55rem, 12%, 5rem);
+  border-radius: 1rem;
+  background: radial-gradient(ellipse at center, #fff2d9 0%, #fceaf0 64%, transparent 86%);
+}
+.card-portrait::before, .card-portrait::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  width: clamp(1.45rem, 13%, 4.75rem);
+  pointer-events: none;
+  background:
+    url("assets/heart-paper.svg") 65% 10% / 44% auto no-repeat,
+    url("assets/flower-paper.svg") 30% 45% / 70% auto no-repeat,
+    url("assets/book-vine.svg") left bottom / 100% 44% no-repeat;
+}
+.card-portrait::before { left: 0; }
+.card-portrait::after {
+  right: 0;
+  transform: scaleX(-1);
+  background-position: 45% 23%, 30% 54%, left bottom;
+}

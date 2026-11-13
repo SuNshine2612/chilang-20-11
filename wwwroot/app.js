@@ -38,7 +38,13 @@ function showArticle(container, item) {
 
 document.querySelector("[data-class]").textContent = newspaper.className;
 document.querySelector("#letter-content").append(
-  ...newspaper.letter.map(line => make("p", line))
+  ...newspaper.letter.map((line, index) => {
+    const paragraph = make("p", line);
+    const icon = make("span", ["💌", "📖", "💗", "🌷", "✨"][index], "letter-icon");
+    icon.setAttribute("aria-hidden", "true");
+    paragraph.prepend(icon);
+    return paragraph;
+  })
 );
 
 const page = document.querySelector("#book-page");
@@ -49,6 +55,7 @@ let pageIndex = 0;
 
 function showPage(direction) {
   const item = newspaper.literature[pageIndex];
+  page.dataset.corners = pageIndex % 2 === 0 ? "original" : "mirrored";
   showArticle(page, item);
   page.prepend(make("p", item.kind, "label"));
   if (direction) {
@@ -313,7 +320,9 @@ card.setAttribute("aria-haspopup", "dialog");
 card.addEventListener("click", () => {
   const envelope = card.querySelector(".envelope").cloneNode(true);
   envelope.classList.add("card-envelope");
-  openViewer(newspaper.card.title, envelope, picture(newspaper.card), make("p", newspaper.card.body, "body"));
+  const portrait = make("div", "", "card-portrait");
+  portrait.append(picture(newspaper.card));
+  openViewer(newspaper.card.title, envelope, portrait, make("p", newspaper.card.body, "body"));
 });
 
 

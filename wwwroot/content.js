@@ -1,10 +1,10 @@
 const newspaper = {
     className: "Lớp 1/7",
     letter: [
-        "Cô Mai kính yêu và các thầy cô thân mến,",
-        "Tháng Mười Một về, chúng em lại nhớ đến cô Mai cùng các thầy cô — những người luôn ân cần dạy bảo chúng em mỗi ngày. Từ nét chữ đầu tiên, phép tính còn khó, đến những lần chúng em rụt rè giơ tay phát biểu, cô Mai và các thầy cô luôn kiên nhẫn hướng dẫn, động viên và tin rằng chúng em sẽ làm được.",
-        "Chúng em cảm ơn cô Mai và tất cả thầy cô vì mỗi ngày đến lớp đều có một lời hỏi han, một nụ cười và thật nhiều yêu thương. Những bài học của thầy cô không chỉ giúp chúng em thêm hiểu biết, mà còn dạy chúng em biết chăm chỉ, sẻ chia và sống tử tế.",
-        "Nhân ngày Nhà giáo Việt Nam 20/11, chúng em kính chúc cô Mai cùng toàn thể thầy cô luôn mạnh khỏe, vui tươi và hạnh phúc. Mong mỗi ngày đến trường của thầy cô đều ngập tràn tiếng cười và tình yêu thương của học trò.",
+        "Kính gửi các thầy cô,",
+        "Tháng Mười Một về, chúng em lại nhớ đến các thầy cô — những người luôn ân cần dạy bảo chúng em mỗi ngày. Từ nét chữ đầu tiên, phép tính còn khó, đến những lần chúng em rụt rè giơ tay phát biểu, thầy cô luôn kiên nhẫn hướng dẫn, động viên và tin rằng chúng em sẽ làm được.",
+        "Chúng em cảm ơn tất cả thầy cô vì mỗi ngày đến lớp đều có một lời hỏi han, một nụ cười và thật nhiều yêu thương. Những bài học của thầy cô không chỉ giúp chúng em thêm hiểu biết, mà còn dạy chúng em biết chăm chỉ, sẻ chia và sống tử tế.",
+        "Nhân ngày Nhà giáo Việt Nam 20/11, chúng em kính chúc thầy cô luôn mạnh khỏe, vui tươi và hạnh phúc. Mong mỗi ngày đến trường của thầy cô đều ngập tràn tiếng cười và tình yêu thương của học trò.",
         "Chúng em yêu quý thầy cô thật nhiều!\nTập thể lớp 1/7"
     ],
     literature: [
@@ -68,7 +68,7 @@ const newspaper = {
         { icon: "✿", image: "images/viec-tot/loi-chao-buoi-sang.webp", title: "Một lời chào buổi sáng", body: "Sáng đến trường, em lễ phép chào thầy cô và bác bảo vệ. Em còn nhặt chiếc lá rơi trước cửa lớp bỏ vào thùng rác. Sân trường sạch hơn, ngày mới của em cũng bắt đầu thật vui." }
     ],
     card: {
-        title: "Gửi cô Mai và các thầy cô", src: "assets/bo-hoa.svg", alt: "Bó hoa giấy tặng cô Mai và các thầy cô",
+        title: "Gửi cô Mai và các thầy cô", src: "assets/loi-ngo-co-mai.webp", alt: "Tranh cô Mai mặc áo dài vàng, cầm bó hoa",
         body: "Cô Mai kính yêu và các thầy cô thân mến!\nChúng em cảm ơn cô Mai và thầy cô đã dịu dàng dạy chúng em từng con chữ, phép tính cùng bao điều hay. Chúng em kính chúc cô Mai và tất cả thầy cô luôn mạnh khỏe, vui vẻ; mỗi ngày đến lớp đều nhận được thật nhiều yêu thương!\nChúng em yêu quý cô Mai và các thầy cô! ♡"
     }
 };
