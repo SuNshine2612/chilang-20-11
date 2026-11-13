@@ -1,0 +1,296 @@
+.tribute-garden {
+  --sky: #e4f4dc;
+  --horizon: #fbf2d5;
+  --garden-ink: #253e34;
+  --soil: #775044; --grass: #cfe2b7;
+  max-width: 1040px;
+  margin: 0 auto 3rem;
+  padding: clamp(1.1rem, 4vw, 2.5rem);
+  border-radius: 1.65rem;
+  color: var(--garden-ink);
+  background: linear-gradient(var(--sky), var(--horizon));
+  text-align: center;
+}
+.tribute-garden[data-sky="night"] {
+  --sky: #252342;
+  --horizon: #40375c;
+  --garden-ink: #fff5e4;
+  --soil: #573c49; --grass: #384d47;
+}
+.tribute-garden h2 { margin: .2rem 0 .45rem; }
+.tribute-garden p { margin: .55rem 0; }
+.tribute-scene {
+  position: relative;
+  min-height: 14rem;
+  display: grid;
+  align-content: end;
+  margin: 1rem 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  padding-top: 5.25rem;
+}
+.tribute-sky {
+  position: absolute;
+  top: 1rem;
+  right: 10%;
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 50%;
+  background: #ffd075;
+  box-shadow: 0 0 0 .55rem #ffd0753d;
+}
+[data-sky="night"] .tribute-sky {
+  background: #f9e8b1;
+  box-shadow: -12rem 1rem 0 -1.35rem #f9e8b1, -6rem -.6rem 0 -1.3rem #f9e8b1;
+}
+.tribute-corner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: .5rem clamp(.8rem, 4vw, 2.75rem) 0;
+  background: var(--grass);
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+.tribute-corner img {
+  display: block;
+  width: clamp(8rem, 20vw, 10rem);
+  max-width: 100%;
+  height: auto;
+}
+.tribute-bed {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: .2rem;
+  min-height: 8rem;
+  padding: .8rem .5rem .45rem;
+  background: var(--grass);
+  border-bottom: 1rem solid var(--soil);
+  border-radius: 0 0 1rem 1rem;
+}
+.tribute-sprout {
+  position: relative;
+  display: grid;
+  place-items: end center;
+  flex: 0 0 max(2.25rem, calc((100% - 2.2rem) / 12));
+  height: 2.9rem;
+  transform-origin: bottom center;
+  animation: tribute-sway 3.2s var(--delay) ease-in-out infinite alternate;
+}
+.tribute-sprout i {
+  position: relative;
+  width: .24rem;
+  height: var(--stem, 2rem);
+  border-radius: .3rem;
+  background: #50906b;
+}
+.tribute-sprout i::before {
+  content: "";
+  position: absolute;
+  top: .85rem;
+  right: .1rem;
+  width: .8rem;
+  height: .48rem;
+  border-radius: 85% 0 80% 0;
+  background: #7ab87a;
+  transform: rotate(var(--leaf-angle, 28deg));
+}
+.tribute-sprout i::after {
+  content: "";
+  position: absolute;
+  bottom: calc(100% - .3rem);
+  left: 50%;
+  width: .44rem;
+  height: .44rem;
+  border-radius: 50%;
+  background: #fff0a5;
+  box-shadow: 0 -.31rem var(--bloom), 0 .31rem var(--bloom), -.41rem 0 var(--bloom), .41rem 0 var(--bloom);
+  transform: translateX(-50%);
+}
+.tribute-sprout.is-fresh i {
+  animation: tribute-grow .7s .35s ease-out both;
+  transform-origin: bottom;
+}
+.tribute-sprout.is-fresh::after {
+  content: "";
+  position: absolute;
+  bottom: .15rem;
+  left: calc(50% - .2rem);
+  width: .4rem;
+  height: .4rem;
+  border-radius: 65% 65% 65% 0;
+  background: #57a8d2;
+  animation: tribute-water .38s ease-in both;
+}
+.tribute-controls .tribute-water[hidden],
+.tribute-water-message:empty { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .tribute-sprout.is-watered:not(.is-fresh)::after {
+    content: "💧";
+    position: absolute;
+    bottom: .35rem;
+    left: calc(50% - .5rem);
+    font-size: .8rem;
+    animation: tribute-water .55s ease-in 2 both;
+  }
+  .tribute-sprout.is-watered:nth-child(even)::after { animation-delay: .14s; }
+}
+@keyframes tribute-water {
+  0% { transform: translateY(-2.4rem) rotate(135deg); opacity: 0; }
+  22% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateY(0) rotate(135deg); opacity: 0; }
+}
+.tribute-fireflies {
+  display: none;
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: min(16rem, 100%);
+  pointer-events: none;
+}
+[data-sky="night"] .tribute-fireflies { display: block; }
+.tribute-fireflies span {
+  position: absolute;
+  width: .28rem;
+  height: .28rem;
+  border-radius: 50%;
+  background: #fff4aa;
+  box-shadow: 0 0 .55rem .12rem #f9df76;
+  animation: tribute-glow 4.8s ease-in-out infinite alternate;
+}
+.tribute-fireflies span:nth-child(1) { top: 21%; left: 17%; }
+.tribute-fireflies span:nth-child(2) { top: 30%; left: 75%; animation-delay: -2.3s; }
+.tribute-fireflies span:nth-child(3) { top: 68%; left: 88%; animation-delay: -3.1s; }
+@keyframes tribute-glow {
+  from { opacity: .3; transform: translateY(.25rem); }
+  to { opacity: .9; transform: translateY(-.45rem); }
+}
+.tribute-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: .65rem; }
+@keyframes tribute-grow {
+  from { transform: scaleY(.04); opacity: .3; }
+  to { transform: scaleY(1); opacity: 1; }
+}
+@keyframes tribute-sway { from { transform: rotate(-5deg); } to { transform: rotate(5deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .tribute-sprout, .tribute-sprout.is-fresh i, .tribute-fireflies span { animation: none; }
+  .tribute-sprout.is-fresh::after { display: none; }
+}
+
+.tribute-controls .button {
+  color: #203b2c;
+  background: #fff9e9;
+  border-color: #77977b;
+}
+.tribute-controls .button:hover { background: #e3efcd; }
+.tribute-garden[data-sky="night"] .tribute-controls .button {
+  color: #fff7e4;
+  background: #46385f;
+  border-color: #b1a0d4;
+}
+.tribute-garden[data-sky="night"] .tribute-controls .button:hover,
+.tribute-garden[data-sky="night"] .tribute-theme[aria-pressed="true"] {
+  background: #625078;
+}
+.tribute-controls .button:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
+.tribute-summary {
+  display: grid;
+  grid-template-columns: minmax(9rem, 1fr) minmax(0, 3fr);
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  max-width: 52rem;
+  margin: 1.25rem auto 0;
+}
+.tribute-garden .tribute-count {
+  display: inline-grid;
+  gap: .15rem;
+  margin: 0;
+  padding: .55rem 1.4rem .7rem;
+  border: 1px solid currentColor;
+  border-radius: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+.tribute-count strong { font-size: clamp(1.9rem, 5vw, 2.7rem); line-height: 1; }
+.tribute-count span { font-size: .9rem; }
+.tribute-message { display: grid; gap: .6rem; }
+.tribute-garden .tribute-dedication {
+  margin: 0;
+  text-align: left;
+  font-style: italic;
+}
+@media (max-width: 620px) {
+  .tribute-summary { grid-template-columns: minmax(0, 1fr); }
+  .tribute-count { justify-self: center; }
+}
+
+.tribute-butterflies {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: min(16rem, 100%);
+  pointer-events: none;
+}
+[data-sky="night"] .tribute-butterflies { display: none; }
+.tribute-butterflies span {
+  position: absolute;
+  top: 24%;
+  left: 18%;
+  display: flex;
+  gap: .06rem;
+  color: #ffe49a;
+  animation: tribute-butterfly 10s ease-in-out infinite;
+}
+.tribute-butterflies span + span {
+  top: 58%;
+  left: 76%;
+  color: #c2a6e5;
+  animation-delay: -4s;
+  animation-direction: reverse;
+}
+.tribute-butterflies span::before,
+.tribute-butterflies span::after {
+  content: "";
+  width: .43rem;
+  height: .56rem;
+  background: currentColor;
+  border: 1px solid #765b7155;
+  border-radius: 70% 85% 35% 65%;
+  transform: rotate(-28deg);
+}
+.tribute-butterflies span::after { transform: scaleX(-1) rotate(-28deg); }
+@keyframes tribute-butterfly {
+  0%, 100% { transform: translate(0, 0) rotate(-10deg); }
+  28% { transform: translate(1rem, -.8rem) rotate(12deg); }
+  52%, 72% { transform: translate(.65rem, .6rem) rotate(4deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tribute-butterflies span { animation: none; }
+}
+
+.tribute-count[hidden] { display: none; }
+.tribute-empty { font-weight: 650; }
+.tribute-garden[data-empty="true"] .tribute-summary { grid-template-columns: 1fr; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .tribute-garden[data-empty="true"] .tribute-empty span {
+    display: inline-block;
+    animation: tribute-invitation-wave 3.6s ease-in-out infinite;
+  }
+  .tribute-garden[data-empty="true"] .tribute-empty span + span {
+    animation-delay: .18s;
+  }
+  .tribute-garden[data-empty="true"] .tribute-plant {
+    animation: tribute-first-seed 3.6s ease-in-out infinite;
+  }
+  .tribute-garden[data-empty="true"] .tribute-plant:is(:hover, :focus-visible) {
+    animation: none;
+  }
+}
+@keyframes tribute-invitation-wave {
+  0%, 48%, 100% { transform: translateY(0); }
+  23% { transform: translateY(-.24rem); }
+}
+@keyframes tribute-first-seed {
+  0%, 55%, 100% { transform: translateY(0) rotate(0); }
+  18% { transform: translateY(-.14rem) rotate(-1.4deg); }
+  36% { transform: translateY(-.08rem) rotate(1.2deg); }
+}

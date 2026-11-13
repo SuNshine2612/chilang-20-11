@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="styles.css">
     <script src="content.js" defer></script>
     <script src="app.js" defer></script>
+    <link rel="stylesheet" href="tribute-garden.css">
+    <script src="tribute-garden.js" defer></script>
 </head>
 <body>
     <div class="flower-rain" aria-hidden="true">
@@ -140,6 +142,33 @@
                 <span class="craft-tape" aria-hidden="true"></span>
                 <button class="postcard" type="button" id="open-card"><span class="envelope" aria-hidden="true"><span class="envelope-paper">♥</span></span><strong>Gửi cô Mai</strong><small>Mở thiệp 20/11 →</small></button>
                 <p class="craft-caption">Một nét vẽ nhỏ · Một lời thương lớn</p>
+            </div>
+        </section>
+        <section id="vuon-tri-an" class="tribute-garden wrap" aria-labelledby="tribute-title">
+            <h2 id="tribute-title">Gieo một cây tri ân</h2>
+            <p>Thầy cô gieo cho chúng em những bài học đầu đời. Hôm nay, chúng em gửi lại một mầm xanh cùng lời thương mến.</p>
+            <div class="tribute-scene" aria-hidden="true">
+                <div class="tribute-sky"></div>
+                <div class="tribute-corner">
+                    <div class="tribute-butterflies"><span></span><span></span></div>
+                    <div class="tribute-fireflies"><span></span><span></span><span></span></div>
+                    <img src="assets/co-tro-cham-cay.webp" alt="" width="480" height="328" loading="lazy" decoding="async">
+                </div>
+                <div class="tribute-bed"></div>
+            </div>
+            <div class="tribute-controls">
+                <button class="button tribute-plant" type="button">🌱 Gieo hạt đầu tiên</button>
+                <button class="button tribute-water" type="button" hidden>💧 Tưới cây</button>
+                <button class="button tribute-theme" type="button" aria-pressed="false">🌙 Cảnh đêm</button>
+            </div>
+            <p class="tribute-water-message" role="status"></p>
+            <div class="tribute-summary">
+                <p class="tribute-empty" role="status"><span>Khu vườn đang chờ hạt giống đầu tiên.</span> <span>Bạn hãy gieo một mầm xanh gửi lời cảm ơn đến thầy cô nhé! 🌱</span></p>
+                <p class="tribute-count" role="status" hidden><strong>0</strong><span>cây tri ân bạn đã gieo</span></p>
+                <div class="tribute-message">
+                    <p class="tribute-dedication">🌱 Nhân ngày 20/11, chúng em kính chúc cô Mai và các thầy cô luôn mạnh khỏe, vui vẻ và có thật nhiều ngày đến lớp ngập tiếng cười. Trong Khu vườn tri ân của lớp 1/7, mỗi mầm xanh là một lời cảm ơn vì thầy cô đã kiên nhẫn dạy chúng em từng nét chữ và động viên chúng em mỗi khi gặp bài khó. Chúng em mong những mầm cây nhỏ này sẽ mang đến cho thầy cô một nụ cười.</p>
+                    <p class="tribute-dedication"> Chúng em yêu quý thầy cô nhiều lắm! Mãi yêu mái trường tiểu học Chi Lăng🌷💗</p>
+                </div>
             </div>
         </section>
     </main>

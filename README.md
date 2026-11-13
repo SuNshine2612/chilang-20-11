@@ -31,3 +31,7 @@ Trang báo tường điện tử của lớp 1/7, Trường Tiểu học Chi Lă
 - Giao diện trang trí theo phong cách sổ lưu bút thiếu nhi, màu sắc tươi sáng, có hiệu ứng chuyển động và hỗ trợ màn hình di động.
 - Website được triển khai qua GitHub Pages: https://sunshine2612.github.io/chilang-20-11/.
 - Hai bài thơ “Cô giáo em” của Trần Hoàng Khánh Trân và “Người gieo hạt” của Vũ Minh Diệp Chi có bản chữ trong Văn học tuổi thơ và ảnh bài viết tay trong Triển lãm của em. Các ảnh JPG bổ sung đã được tích hợp vào triển lãm.
+
+## Vườn cây tri ân
+
+Mỗi trình duyệt lưu số cây đã gieo bằng localStorage. Vườn hoạt động trên GitHub Pages và khi mở báo tường offline. Cảnh ngày đêm được chọn theo giờ Việt Nam và có thể đổi bằng nút trong vườn.
