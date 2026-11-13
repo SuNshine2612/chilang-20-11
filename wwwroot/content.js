@@ -37,7 +37,9 @@ const newspaper = {
         { src: "images/hoc-sinh/khanh-vy.png", title: "Khánh Vy làm báo tường tại nhà" },
         ...Array.from({ length: 17 }, (_, index) => ({ src: `images/hoc-sinh/lop-hoc-${index + 1}.jpg`, title: "Các bạn lớp 1/7 cùng làm báo tường" })),
         { src: "images/hoc-sinh/yen-nhi-1.png", title: "Bùi Huỳnh Yên Nhi làm báo tường tại nhà" },
-        { src: "images/hoc-sinh/yen-nhi-2.png", title: "Bùi Huỳnh Yên Nhi làm báo tường tại nhà" }
+        { src: "images/hoc-sinh/yen-nhi-2.png", title: "Bùi Huỳnh Yên Nhi làm báo tường tại nhà" },
+        { src: "images/hoc-sinh/anh-thy-1.jpg", title: "Anh Thy làm báo tường" },
+        { src: "images/hoc-sinh/anh-thy-2.jpg", title: "Anh Thy làm báo tường" }
     ],
     schoolPhotos: [
         ...Array.from({ length: 26 }, (_, index) => ({ src: `images/ki-niem-mai-truong/ki-niem-${index + 1}.png`, title: "Kỷ niệm hoạt động ở trường" })),
@@ -45,6 +47,10 @@ const newspaper = {
         { src: "images/ki-niem-mai-truong/lop-xuat-sac.png", title: "Niềm vui của lớp đạt thành tích tốt" },
         { src: "images/ki-niem-mai-truong/nam-hoc-moi.png", title: "Ngày hội khai trường" }
     ],
+    flowerArrangingPhotos: Array.from({ length: 30 }, (_, index) => ({
+        src: "images/cam-hoa/cam-hoa (" + (index + 1) + ").jpg",
+        title: "Lớp 1/7 cùng cắm hoa"
+    })),
     memories: [
         { icon: "📖", title: "Buổi đầu đọc trước lớp", body: "Em đọc nhỏ đến nỗi chỉ bàn đầu nghe thấy. Cô đợi em đọc xong rồi hỏi em thích nhất câu nào. Em đọc lại câu đó to hơn một chút. Lần thứ hai, cả lớp cùng nghe." },
         { icon: "🌱", title: "Cây đậu bên cửa sổ", body: "Tuần đầu, cốc đậu của tổ em chưa nhú mầm. Cô nhắc chúng em tưới từng ít một và chờ thêm. Sáng thứ Hai, cả tổ reo lên vì thấy hai chiếc lá bé xíu." },

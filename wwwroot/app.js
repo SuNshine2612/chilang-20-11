@@ -237,6 +237,7 @@ renderGallery(document.querySelector("#gallery"), newspaper.exhibitionArt);
 renderGallery(document.querySelector("#writing-gallery"), newspaper.exhibitionWriting);
 renderGallery(document.querySelector("#making-gallery"), newspaper.makingPhotos);
 renderGallery(document.querySelector("#school-gallery"), newspaper.schoolPhotos);
+renderGallery(document.querySelector("#flower-arranging-gallery"), newspaper.flowerArrangingPhotos);
 
 const memories = document.querySelector("#memories");
 for (const memory of newspaper.memories) {
