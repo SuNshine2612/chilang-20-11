@@ -24,7 +24,9 @@ const newspaper = {
         { title: "Nguyễn Thị Minh Khanh", src: "images/tranh/trang-minh-khanh.jpg", alt: "Tranh vẽ của Nguyễn Thị Minh Khanh" },
         { title: "Vũ Minh Diệp Chi", src: "images/tranh/trang-vu-minh-diep-chi-1.jpg", alt: "Tranh vẽ của Vũ Minh Diệp Chi" },
         { title: "Phạm Ngô Duy Minh", src: "images/tranh/tranh-pham-ngo-duy-minh.jpg", alt: "Tranh vẽ của Phạm Ngô Duy Minh" },
-        { title: "Thái Quốc An", src: "images/tranh/tranh-thai-quoc-an.jpg", alt: "Tranh vẽ của Thái Quốc An" }
+        { title: "Thái Quốc An", src: "images/tranh/tranh-thai-quoc-an.jpg", alt: "Tranh vẽ của Thái Quốc An" },
+        { src: "images/tranh/tranh-kim-phuong-1.png", title: "Tranh của Kim Phương (1)", alt: "Tranh số 1 của Kim Phương" },
+        { src: "images/tranh/tranh-kim-phuong-2.png", title: "Tranh của Kim Phương (2)", alt: "Tranh số 2 của Kim Phương" }
     ],
     exhibitionWriting: [
         { title: "Kỷ niệm đầu tiên", author: "Bùi Huỳnh Yên Nhi", src: "images/tranh/tranh-yen-nhi-2.png", alt: "Trang viết tay kỷ niệm đầu tiên của Bùi Huỳnh Yên Nhi" },
@@ -39,7 +41,9 @@ const newspaper = {
         { src: "images/hoc-sinh/yen-nhi-1.png", title: "Bùi Huỳnh Yên Nhi làm báo tường tại nhà" },
         { src: "images/hoc-sinh/yen-nhi-2.png", title: "Bùi Huỳnh Yên Nhi làm báo tường tại nhà" },
         { src: "images/hoc-sinh/anh-thy-1.jpg", title: "Anh Thy làm báo tường" },
-        { src: "images/hoc-sinh/anh-thy-2.jpg", title: "Anh Thy làm báo tường" }
+        { src: "images/hoc-sinh/anh-thy-2.jpg", title: "Anh Thy làm báo tường" },
+        { src: "images/hoc-sinh/kim-phuong-1.jpg", title: "Kim Phương làm báo tường" },
+        { src: "images/hoc-sinh/kim-phuong-2.jpg", title: "Kim Phương làm báo tường" }
     ],
     schoolPhotos: [
         ...Array.from({ length: 26 }, (_, index) => ({ src: `images/ki-niem-mai-truong/ki-niem-${index + 1}.png`, title: "Kỷ niệm hoạt động ở trường" })),
