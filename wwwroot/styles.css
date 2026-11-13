@@ -845,3 +845,59 @@ dialog.is-card #dialog-content p.body { width: min(100%, 45rem); margin: 0; padd
 @media (max-width: 600px) {
   .memories { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Pinned photographs in the school memories albums. */
+:is(#making-gallery, #school-gallery) {
+  gap: clamp(.85rem, 2vw, 1.65rem);
+  padding: .65rem .3rem .35rem;
+}
+:is(#making-gallery, #school-gallery) .art-card {
+  --pin: #e5829e;
+  --photo-tilt: -1.6deg;
+  position: relative;
+  rotate: var(--photo-tilt);
+}
+:is(#making-gallery, #school-gallery) .art-card:nth-child(4n+2) {
+  --pin: #8f79c8;
+  --photo-tilt: 1.35deg;
+}
+:is(#making-gallery, #school-gallery) .art-card:nth-child(4n+3) {
+  --pin: #6bb194;
+  --photo-tilt: -.85deg;
+}
+:is(#making-gallery, #school-gallery) .art-card:nth-child(4n+4) {
+  --pin: #e6aa52;
+  --photo-tilt: 1.8deg;
+}
+:is(#making-gallery, #school-gallery) .art-card::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -.4rem;
+  left: 50%;
+  width: .9rem;
+  height: .9rem;
+  border: 1px solid #41294035;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ffffffb0, transparent 52%), var(--pin);
+  box-shadow: 1px 3px 3px #41294045;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+:is(#making-gallery, #school-gallery) .art-card:nth-child(even)::before {
+  width: 1.7rem;
+  height: .62rem;
+  border-radius: .16rem;
+  transform: translateX(-50%) rotate(-12deg);
+}
+:is(#making-gallery, #school-gallery) .art-card:nth-child(3n)::before {
+  width: .72rem;
+  height: .72rem;
+  border-radius: .18rem;
+  transform: translateX(-50%) rotate(45deg);
+}
+@media (max-width: 520px) {
+  :is(#making-gallery, #school-gallery) .art-card {
+    rotate: calc(var(--photo-tilt) / 2);
+  }
+}
